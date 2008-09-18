@@ -1,0 +1,76 @@
+a {text-decoration: none;} /* 链接无下划线,有为underline */ 
+a:link {color: #333333;} /* 未访问的链接 */
+a:visited {color: #333333;} /* 已访问的链接 */
+a:hover {color: #999999;} /* 鼠标在链接上 */ 
+a:active {color: #999999;} /* 点击激活链接 */
+
+body 
+{
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #333333;
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	background-image: url(main_bg.gif);
+	SCROLLBAR-3DLIGHT-COLOR: #F1F2F4;
+	SCROLLBAR-FACE-COLOR: #F1F2F4;
+	SCROLLBAR-SHADOW-COLOR: #F1F2F4;
+	SCROLLBAR-DARK-SHADOW-COLOR: #F1F2F4;
+	SCROLLBAR-TRACK-COLOR: #F1F2F4;
+}
+TH {FONT-SIZE: 12px}
+TD {FONT-SIZE: 12px;}
+SELECT {FONT-SIZE: 12px}
+textarea{FONT-SIZE: 12px;border: 1px double #B4B4B4;}
+A {	COLOR: #333333; TEXT-DECORATION: none; TEXT-TRANSFORM: none}
+A:hover {COLOR: #ff6600; TEXT-DECORATION: underline}
+.input {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #6699CC;
+	border: 1px solid #6699CC;
+	background-color: #FFFFFF;
+}
+.td_lr {
+	border-right-width: 1px;
+	border-left-width: 1px;
+	border-right-style: solid;
+	border-left-style: solid;
+	border-right-color: #CCCCCC;
+	border-left-color: #CCCCCC;
+}
+.pagekind {
+	background-color: #E4E4E4;
+	border: 1px solid #cccccc;
+	height: 20px;
+	width: 20px;
+	left: 0px;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	clip: rect(0px,0px,0px,0px);
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: bold;
+	font-variant: normal;
+	color: #336699;
+}
+.td_ldr {
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-left-style: solid;
+	border-right-color: #C0C0C0;
+	border-bottom-color: #C0C0C0;
+	border-left-color: #C0C0C0;
+}
+.td_d {
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #BDBCBD;
+}

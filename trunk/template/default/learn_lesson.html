@@ -1,0 +1,110 @@
+<table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="188" align="center"><table width="188"  border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="188" height="37" align="center" background="{IMGDIR}small_top.gif">用户信息</td>
+      </tr>
+      <tr>
+        <td align="center" background="{IMGDIR}small_bg.gif">{USERINFO}</td>
+      </tr>
+      <tr>
+        <td align="center"><img src="{IMGDIR}small_down.gif" width="188" height="11"></td>
+      </tr>
+      <tr>
+        <td width="188" height="37" align="center" background="{IMGDIR}small_top.gif">培训查询</td>
+      </tr>
+      <tr>
+        <td align="center" background="{IMGDIR}small_bg.gif"><table border="0" align="center" cellpadding="0" cellspacing="1">
+          <form action="search.php" method="post">
+            <tr>
+              <td align="center">时&nbsp;&nbsp;间</td>
+              <td>&nbsp;
+                  <select name="addtime" id="addtime" class="input">
+                    {SELECT_TIME}
+                </select></td>
+            </tr>
+            <tr>
+              <td align="center">课程名</td>
+              <td>&nbsp;
+                  <input name="lesson" type="text" id="lesson" size="10" class="input"></td>
+            </tr>
+            <tr>
+              <td colspan="2" align="center" background="images/xixian_line.gif"></td>
+            </tr>
+            <tr>
+              <td align="center">类&nbsp;&nbsp;别</td>
+              <td>&nbsp;
+                  <select name="leixing" id="leixing" class="input">
+                    {SELECT_LESSON}
+                </select></td>
+            </tr>
+            <tr>
+              <td colspan="2" align="center" background="images/xixian_line.gif"></td>
+            </tr>
+            <tr>
+              <td align="center">上课地</td>
+              <td>&nbsp;
+                  <input name="address" type="text" id="address" size="10" class="input"></td>
+            </tr>
+            <tr>
+              <td colspan="2" align="center" background="images/xixian_line.gif"></td>
+            </tr>
+            <tr>
+              <td align="center">培训费</td>
+              <td>&nbsp;
+                  <input name="money" type="text" class="input" id="money" size="10"></td>
+            </tr>
+            <tr>
+              <td colspan="2" align="center" background="images/xixian_line.gif"></td>
+            </tr>
+            <tr align="center">
+              <td colspan="2"><input name="submit_lesson" type="submit" class="input" id="submit_lesson" value=" 提交查询 "></td>
+            </tr>
+          </form>
+        </table></td>
+      </tr>
+      <tr>
+        <td align="center"><img src="{IMGDIR}small_down.gif" width="188" height="11"></td>
+      </tr>
+    </table></td>
+    <td align="center">
+	<table width="581" height="36"  border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td width="581" height="36" align="right" background="{IMGDIR}control/lesson.gif">&nbsp;</td>
+      </tr>
+    </table>
+      <table width="581" height="36"  border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td width="581" align="center" valign="top" background="{IMGDIR}control/center_bg.gif"><table width="550"  border="0" cellpadding="0" cellspacing="0" class="td_four">
+            <tr>
+              <td height="25" bgcolor="#F2F2F2">&nbsp;培训课程名称</td>
+              <td align="center" bgcolor="#F2F2F2">开课时间</td>
+              <td align="center" bgcolor="#F2F2F2">培训费用</td>
+            </tr>
+			<!-- BEGIN lesson_list -->
+			<tr>
+			  <td height="1" colspan="3" background="{IMGDIR}/row.gif"></td>
+			</tr>
+            <tr>
+              <td height="25">&nbsp;<a href="{LESSON_LINK}" target="_blank">{LESSON_NAME}</a></td>
+              <td align="center">{LESSON_TIME}</td>
+              <td align="center">{LESSON_MONEY}</td>
+            </tr>
+			<!-- END lesson_list -->
+			<tr>
+			  <td height="1" colspan="3" background="{IMGDIR}/row.gif"></td>
+			</tr>
+            <tr align="center">
+              <td height="35" colspan="3">{PAGELIST}</td>
+              </tr>
+          </table></td>
+        </tr>
+      </table>
+      <table width="581" height="15"  border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td width="581" height="15" background="{IMGDIR}control/center_down.gif"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>

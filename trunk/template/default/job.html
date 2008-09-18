@@ -1,0 +1,166 @@
+<table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="188" align="center">
+	  <table width="188"  border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td width="188" height="37" align="center" background="{IMGDIR}small_top.gif">用户信息</td>
+        </tr>
+        <tr>
+          <td align="center" background="{IMGDIR}small_bg.gif">{USERINFO}</td>
+        </tr>
+        <tr>
+          <td align="center"><img src="{IMGDIR}small_down.gif" width="188" height="11"></td>
+        </tr>
+        <tr>
+          <td width="188" height="37" align="center" background="{IMGDIR}small_top.gif">职位查询</td>
+        </tr>
+        <tr>
+          <td align="center" background="{IMGDIR}small_bg.gif"><table border="0" align="center" cellpadding="0" cellspacing="1">
+            <form action="search.php" method="post">
+              <tr>
+                <td align="center">时&nbsp;&nbsp;间</td>
+                <td>&nbsp;
+                    <select name="addtime" id="forlong" class="input">
+                      {SELECT_TIME}
+                  </select></td>
+              </tr>
+              <tr>
+                <td colspan="2" align="center" background="images/xixian_line.gif"></td>
+              </tr>
+              <tr>
+                <td align="center">性&nbsp;&nbsp;别</td>
+                <td>&nbsp;
+                    <select name="sex" id="sex" class="input">
+                      {SELECT_SEX}
+                  </select></td>
+              </tr>
+              <tr>
+                <td colspan="2" align="center" background="images/xixian_line.gif"></td>
+              </tr>
+              <tr>
+                <td align="center">学&nbsp;&nbsp;历</td>
+                <td>&nbsp;
+                    <select name="edu" class="input" id="edu" >
+                      {SELECT_EDU}
+                  </select></td>
+              </tr>
+              <tr>
+                <td colspan="2" align="center" background="images/xixian_line.gif"></td>
+              </tr>
+              <tr>
+                <td align="center">职位名</td>
+                <td>&nbsp;
+                    <input name="job" type="text" id="job" size="10" class="input"></td>
+              </tr>
+              <tr>
+                <td colspan="2" align="center" background="images/xixian_line.gif"></td>
+              </tr>
+              <tr>
+                <td align="center">工作地</td>
+                <td>&nbsp;
+                    <input name="address" type="text" class="input" size="10"></td>
+              </tr>
+              <tr>
+                <td colspan="2" align="center" background="images/xixian_line.gif"></td>
+              </tr>
+              <tr align="center">
+                <td colspan="2"><input name="submit_job" type="submit" class="input" id="search_job" value=" 提交查询 "></td>
+              </tr>
+            </form>
+          </table></td>
+        </tr>
+        <tr>
+          <td align="center"><img src="{IMGDIR}small_down.gif" width="188" height="11"></td>
+        </tr>
+        <tr>
+          <td width="188" height="37" align="center" background="{IMGDIR}small_top.gif">最新企业</td>
+        </tr>
+        <tr>
+          <td align="center" background="{IMGDIR}small_bg.gif"><table width="125" border="0" cellspacing="0" cellpadding="0">
+            <!-- BEGIN company -->
+            <tr>
+              <td height="24">{NEW_COMPANY}</td>
+            </tr>
+            <tr>
+              <td height="1" background="{IMGDIR}/row.gif"></td>
+            </tr>
+            <!-- END company -->
+            <tr>
+              <td height="5"></td>
+            </tr>
+          </table></td>
+        </tr>
+        <tr>
+          <td align="center"><img src="{IMGDIR}small_down.gif" width="188" height="11"></td>
+        </tr>
+        <tr>
+          <td width="188" height="37" align="center" background="{IMGDIR}small_top.gif">相关链接</td>
+        </tr>
+        <tr>
+          <td align="center" background="{IMGDIR}small_bg.gif">&nbsp;</td>
+        </tr>
+        <tr>
+          <td align="center"><img src="{IMGDIR}small_down.gif" width="188" height="11"></td>
+        </tr>
+      </table></td>
+    <td align="center"><table width="581" height="36"  border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td width="581" height="36" background="{IMGDIR}control/jobtype.gif"></td>
+      </tr>
+    </table>
+      <table width="581" border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td width="581" align="center" valign="top" background="{IMGDIR}job/center_bg.gif">
+		  <table width="550"  border="0" cellpadding="5" cellspacing="0" class="td_four">
+              <tr bgcolor="#f8f8f8">
+                <td align="left">{JOBTYPE_LIST}</td>
+              </tr>
+          </table>
+		  </td>
+        </tr>
+      </table>
+      <table width="581" height="15"  border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td width="581" height="15" background="{IMGDIR}job/center_down.gif"></td>
+        </tr>
+      </table>
+      <table width="581" height="36"  border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td width="581" height="36" background="{IMGDIR}job/center_top.gif"></td>
+      </tr>
+    </table>
+      <table width="581" height="36"  border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td width="581" align="center" valign="top" background="{IMGDIR}job/center_bg.gif"><table width="550"  border="0" cellpadding="0" cellspacing="0" class="td_four">
+            <tr bgcolor="#f8f8f8">
+              <td height="25" align="center">职位名称</td>
+              <td height="25" align="center">招聘企业</td>
+              <td height="25" align="center">学历要求</td>
+              <td height="25" align="center">招聘人数</td>
+              <td height="25" align="center">发布时间</td>
+            </tr>
+			<!-- BEGIN joblist -->
+            <tr>
+              <td height="25" align="center">{JOB}</td>
+              <td height="25" align="center"><a href="view.php?action=company&info={LINKCOM}" target="_blank">{COMPANY}</a></td>
+              <td height="25" align="center">{EDU}</td>
+              <td height="25" align="center">{MAN}</td>
+              <td height="25" align="center">{ADDTIME}</td>
+            </tr>
+            <tr>
+              <td height="1" colspan="5"><table width="97%"  border="0" align="center" cellpadding="0" cellspacing="0"><tr><td background="{IMGDIR}row.gif" height="1"></td></tr></table></td>
+            </tr>
+			<!-- END joblist -->
+            <tr align="center" valign="middle">
+              <td height="35" colspan="5">{PAGELIST}</td>
+            </tr>
+          </table></td>
+        </tr>
+      </table>
+      <table width="581" height="15"  border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td width="581" height="15" background="{IMGDIR}job/center_down.gif"></td>
+        </tr>
+      </table></td>
+  </tr>
+</table>

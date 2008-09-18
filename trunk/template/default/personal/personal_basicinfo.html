@@ -1,0 +1,154 @@
+<link href="../../css/style.css" rel="stylesheet" type="text/css">
+<table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="188" align="center">{PERCP}	</td>
+    <td align="center"><table width="581" height="36"  border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td width="581" height="36" background="{IMGDIR}control/basicinfo.gif"></td>
+      </tr>
+    </table>
+      <table width="581" height="36"  border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td width="581" align="center" valign="middle" background="{IMGDIR}control/center_bg.gif">
+		  <table width="550" border="0" align="center" cellpadding="0" cellspacing="0" class="td_four">
+		  <form action="personal.php?action=basicinfo" method="post">
+            <tr>
+              <td width="25%" height="30" align="center">真实姓名</td>
+              <td><input name="truename" type="text" class="input" id="truename" value="{TRUENAME}" size="50" maxlength="50"></td>
+            </tr>
+            <tr align="center">
+              <td height="1" colspan="2">
+			  <table width="500" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td height="1" background="{IMGDIR}row.gif"></td>
+                </tr>
+              </table>
+			  </td>
+            </tr>
+			<tr>
+              <td width="25%" height="30" align="center">性&nbsp;&nbsp;&nbsp;&nbsp;别</td>
+              <td><select name="sex" class="input" id="sex">{SELECT_SEX}</select></td>
+            </tr>
+            <tr align="center">
+              <td height="1" colspan="2">
+			  <table width="500" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td height="1" background="{IMGDIR}row.gif"></td>
+                </tr>
+              </table>
+			  </td>
+            </tr>
+			<tr>
+              <td width="25%" height="30" align="center">民&nbsp;&nbsp;&nbsp;&nbsp;族</td>
+              <td><select name="mingzu" class="input" id="mingzu">{SELECT_MINZU}</select></td>
+            </tr>
+            <tr align="center">
+              <td height="1" colspan="2">
+			  <table width="500" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td height="1" background="{IMGDIR}row.gif"></td>
+                </tr>
+              </table>
+			  </td>
+            </tr>
+			<tr>
+              <td width="25%" height="30" align="center">出生年日</td>
+              <td><select name="year" class="input" id="year">{SELECT_YEAR}</select>
+                年
+                <select name="month" class="input" id="month">{SELECT_MONTH}</select>
+                月
+                <select name="day" class="input" id="day">{SELECT_DAY}</select>
+                日</td>
+            </tr>
+            <tr align="center">
+              <td height="1" colspan="2">
+			  <table width="500" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td height="1" background="{IMGDIR}row.gif"></td>
+                </tr>
+              </table>
+			  </td>
+            </tr>
+			<tr>
+              <td width="25%" height="30" align="center">户&nbsp;&nbsp;&nbsp;&nbsp;口</td>
+              <td><select name="hukou" class="input" id="hukou">{SELECT_HUKOU}</select></td>
+            </tr>
+            <tr align="center">
+              <td height="1" colspan="2">
+			  <table width="500" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td height="1" background="{IMGDIR}row.gif"></td>
+                </tr>
+              </table>
+			  </td>
+            </tr>
+			<tr>
+              <td width="25%" height="30" align="center">居&nbsp;住&nbsp;地</td>
+              <td><select name="juzhu_1" class="input" id="juzhu_1">{SELECT_JZD}</select>
+                省
+                <input name="juzhu_2" type="text" class="input" id="juzhu_2" value="{JUZHU_2}" size="50"></td>
+            </tr>
+            <tr align="center">
+              <td height="1" colspan="2">
+			  <table width="500" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td height="1" background="{IMGDIR}row.gif"></td>
+                </tr>
+              </table>
+			  </td>
+            </tr>
+			<tr>
+              <td width="25%" height="30" align="center">身&nbsp;份&nbsp;证</td>
+              <td><input name="shengfengzhen" type="text" class="input" id="shengfengzhen" value="{SFZ}" size="30"></td>
+            </tr>
+            <tr align="center">
+              <td height="1" colspan="2">
+			  <table width="500" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td height="1" background="{IMGDIR}row.gif"></td>
+                </tr>
+              </table>
+			  </td>
+            </tr>
+			<tr>
+              <td width="25%" height="30" align="center">婚姻状况</td>
+              <td><select name="marry" class="input" id="marry">{SELECT_MARRY}</select></td>
+            </tr>
+            <tr align="center">
+              <td height="1" colspan="2">
+			  <table width="500" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td height="1" background="{IMGDIR}row.gif"></td>
+                </tr>
+              </table>
+			  </td>
+            </tr>
+			<tr>
+              <td width="25%" height="30" align="center">政治面貌</td>
+              <td><select name="social" class="input" id="social">{SELECT_SOCIAL}</select></td>
+            </tr>
+            <tr align="center">
+              <td height="1" colspan="2">
+			  <table width="500" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td height="1" background="{IMGDIR}row.gif"></td>
+                </tr>
+              </table>
+			  </td>
+            </tr>
+			<tr>
+              <td height="35" colspan="2" align="center"><input name="save" type="submit" class="input" id="save" value=" 保  存 ">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input name="reset" type="reset" class="input" id="reset" value=" 重  设 "></td>
+            </tr>
+		  </form>
+          </table></td>
+        </tr>
+      </table>
+      <table width="581" height="15"  border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td width="581" height="15" background="{IMGDIR}control/center_down.gif"></td>
+        </tr>
+      </table></td>
+  </tr>
+</table>

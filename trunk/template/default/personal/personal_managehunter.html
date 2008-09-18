@@ -1,0 +1,66 @@
+<link href="../../css/style.css" rel="stylesheet" type="text/css">
+<table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="188" align="center">{PERCP}	</td>
+    <td align="center"><table width="581" height="36"  border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td width="581" height="36" background="{IMGDIR}control/manageperhunter.gif"></td>
+      </tr>
+    </table>
+      <table width="581" height="36"  border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td width="581" align="center" valign="middle" background="{IMGDIR}control/center_bg.gif"><table width="550" border="0" align="center" cellpadding="0" cellspacing="0" class="td_four">
+            <form action="personal.php?action=managehunter" method="post">
+              <tr>
+                <td height="25" align="left">&nbsp;&nbsp;&nbsp;期盼职位</td>
+                <td align="center"><input name="delpage" type="hidden" id="delpage" value="{DELPAGE}">
+                  状态</td>
+                <td align="center">查看</td>
+                <td height="25" align="center">发布时间</td>
+                <td height="25" align="center">结束时间</td>
+                <td height="25" align="center">编辑</td>
+                <td height="25" align="center">删除</td>
+              </tr>
+              <tr>
+                <td colspan="7" align="center">
+				  <table width="95%"  border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td height="1" background="{IMGDIR}row.gif"></td>
+                  </tr>
+                </table></td>
+              </tr>
+			  <!-- BEGIN list -->
+              <tr>
+                <td height="25" align="left">&nbsp;&nbsp;&nbsp;<a href="view.php?action=hunterfind&info={FINDID}" target="_blank">{INDUSTRY}</a></td>
+                <td height="25" align="center">{STATUS}</td>
+                <td height="25" align="center">{CLICK}</td>
+                <td height="25" align="center">{ADDTIME}</td>
+                <td height="25" align="center">{LOSETIME}</td>
+                <td height="25" align="center"><a href="personal.php?action=managehunter&info={FINDID}">编辑</a></td>
+                <td height="25" align="center"><input name="delete[]" type="checkbox" id="delete[]" value="{FINDID}"></td>
+              </tr>
+              <tr>
+                <td colspan="7" align="center">
+				  <table width="95%"  border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td height="1" background="{IMGDIR}row.gif"></td>
+                  </tr>
+                </table></td>
+              </tr>
+			  <!-- END list -->
+              <tr>
+                <td height="30" colspan="5" align="center">{PAGELIST}</td>
+                <td height="25" align="center"><input name="delete_hunter" type="submit" class="input" id="delete_find" value="删除"></td>
+                <td height="25" align="center"><input name="chkall" type="checkbox" class="main_button" onclick="checkall(this.form)" value="del"></td>
+              </tr>
+            </form>
+          </table></td>
+        </tr>
+      </table>
+      <table width="581" height="15"  border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td width="581" height="15" background="{IMGDIR}control/center_down.gif"></td>
+        </tr>
+      </table></td>
+  </tr>
+</table>

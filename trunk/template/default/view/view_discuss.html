@@ -1,0 +1,116 @@
+<link href="../../css/style.css" rel="stylesheet" type="text/css">
+<table width="776" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td align="center"><TABLE ><TR><TD height="3"></TD></TR></TABLE>
+		<table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td align="center"><img src="{IMGDIR}global/top.gif" width="776" height="4"></td>
+          </tr>
+          <tr>
+            <td height="25" valign="bottom" background="{IMGDIR}global/mainbg.gif">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;◎&nbsp;&nbsp;&nbsp;&nbsp;会 员 评 论</td>
+          </tr>
+          <tr>
+            <td background="{IMGDIR}global/mainbg.gif"><hr width="94%" size="1" color="#CCCCCC"></td>
+          </tr>
+          <tr>
+            <td align="center" background="{IMGDIR}global/mainbg.gif">
+
+			<!-- BEGIN discuss -->
+			<table width="730"  border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="{TABLECOLOR}" class="td_four">
+                <TR>
+                  <TD height="30" align=center><table width="98%"  border="0" align="center" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td height="5"></td>
+                    </tr>
+                    <tr>
+                      <td>{CONTEXT}</td>
+                    </tr>
+                    <tr>
+                      <td height="5"></td>
+                    </tr>
+                    <tr>
+                      <td height="1" bgcolor="#CCCCCC"></td>
+                    </tr>
+                    <tr>
+                      <td height="25" bgcolor="#f8f8f8">&nbsp;{ADDTIME}</td>
+                    </tr>
+                    <tr>
+                      <td height="5"></td>
+                    </tr>
+                  </table></TD>
+                </TR>
+            </table>
+			<table cellpadding="0" cellspacing="0" border="0" width="100" height="10">
+			  <tr><td></td></tr></table>
+			<!-- END discuss -->
+			</td>
+          </tr>
+          <tr>
+            <td height="10" align="center" background="{IMGDIR}global/mainbg.gif"></td>
+          </tr>
+          <tr>
+            <td align="center"><img src="{IMGDIR}global/down.gif" width="776" height="4"></td>
+          </tr>
+        </table>
+		<table  border="0" cellspacing="0" cellpadding="0"><tr><td height="5"></td></tr></table>
+		<table width="776" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td><img src="{IMGDIR}global/top.gif" width="776" height="4"></td>
+          </tr>
+          <tr>
+            <td height="30" align="center" valign="middle" background="{IMGDIR}global/mainbg.gif">{PAGELIST}</td>
+          </tr>
+          <tr>
+            <td><img src="{IMGDIR}global/down.gif" width="776" height="4"></td>
+          </tr>
+        </table>
+		<table  border="0" cellspacing="0" cellpadding="0"><tr><td height="5"></td></tr></table>
+		<table width="776" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td align="center"><img src="{IMGDIR}global/top.gif" width="776" height="4"></td>
+          </tr>
+          <tr>
+            <td height="25" align="left" valign="bottom" background="{IMGDIR}global/mainbg.gif">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;◎&nbsp;&nbsp;&nbsp;&nbsp;快 速 发 表 </td>
+          </tr>
+          <tr>
+            <td align="center" valign="middle" background="{IMGDIR}global/mainbg.gif"><hr width="94%" size="1" color="#CCCCCC"></td>
+          </tr>
+          <tr>
+            <td align="center" valign="middle" background="{IMGDIR}global/mainbg.gif">
+			<table width="730"  border="0" cellpadding="0" cellspacing="0" class="td_four">
+              <form action="view.php?action=discuss" method="post">
+              <TR align="center">
+                <TD height="1" colspan="2"><table width="96%"  border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td height="5"></td>
+                    </tr>
+                </table></TD>
+              </TR>
+              <TR>
+                <TD width="82" height="30" align=center>内&nbsp;&nbsp;&nbsp;&nbsp;容</TD>
+                <TD height="30"><textarea name="context" cols="120" rows="10" wrap="VIRTUAL" class="input" id="context"></textarea></TD>
+              </TR>
+			  <TR>
+                <TD height="40" colspan="2" align=center><input name="submit_disscuss" type="submit" class="input" id="submit_discuss" value=" 发表评论 ">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input name="reset" type="reset" class="input" id="reset" value=" 重 设 ">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<input name="back" type="button" class="input" id="back" onClick="javascript:history.go(-1)" value=" 返 回 ">
+<input name="infoid" type="hidden" id="infoid" value="{INFOID}">
+<input name="infotable" type="hidden" id="infotable" value="{INFOTABLE}">
+<input name="infokey" type="hidden" id="infokey" value="{INFOKEY}"></TD>
+                </TR>
+			  </form>
+            </table>
+              <table cellpadding="0" cellspacing="0" border="0" width="100" height="10">
+                <tr>
+                  <td></td>
+                </tr>
+            </table></td>
+          </tr>
+          <tr>
+            <td align="center"><img src="{IMGDIR}global/down.gif" width="776" height="4"></td>
+          </tr>
+    </table></td>
+  </tr>
+</table>

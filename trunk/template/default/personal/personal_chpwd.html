@@ -1,0 +1,134 @@
+<link href="../../../css/style.css" rel="stylesheet" type="text/css">
+<table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="188" align="center">{PERCP}	</td>
+    <td align="center"><table width="581" height="36"  border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td width="581" height="36" background="{IMGDIR}control/chpwd.gif"></td>
+      </tr>
+    </table>
+      <table width="581" height="36"  border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td width="581" align="center" valign="middle" background="{IMGDIR}control/center_bg.gif">
+		  <table width="550" border="0" align="center" cellpadding="0" cellspacing="0" class="td_four">
+			<form action="personal.php?action=chpwd" method="post">
+			<tr>
+              <td width="25%" height="30" align="center">登陆用户</td>
+              <td width="75%" height="30" align="left"> {LOGINUSERNAME}                </td>
+			</tr>
+			<tr>
+			  <td height="1" colspan="2" align="center"><table width="90%" border="0" align="center" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td background="{IMGDIR}row.gif" height="1"></td>
+                </tr>
+              </table></td>
+			  </tr>
+			<tr>
+              <td width="25%" height="30" align="center">原始密码</td>
+              <td width="75%" height="30" align="left"><input name="oripass" type="password" class="input" id="oripass" size="50">
+                &nbsp;&nbsp;<FONT color="#FF0000">(*)</FONT></td>
+			</tr>
+			<tr>
+			  <td height="1" colspan="2" align="center"><table width="90%" border="0" align="center" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td background="{IMGDIR}row.gif" height="1"></td>
+                </tr>
+              </table></td>
+			  </tr>
+			  <tr>
+			  <td height="30" align="center">新&nbsp;密&nbsp;码</td>
+			  <td height="30" align="left"><input name="pass" type="password" class="input" id="pass" size="50">
+&nbsp;&nbsp;<FONT color="#FF0000">(*)</FONT></td>
+			  </tr>
+			<tr>
+			  <td height="1" colspan="2" align="center"><table width="90%" border="0" align="center" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td background="{IMGDIR}row.gif" height="1"></td>
+                </tr>
+              </table></td>
+			  </tr>
+			<tr>
+			  <td height="30" align="center">验证密码</td>
+			  <td height="30" align="left"><input name="repass" type="password" class="input" id="repass" size="50">
+&nbsp;&nbsp;<FONT color="#FF0000">(*)</FONT></td>
+			  </tr>
+			<tr>
+			  <td height="1" colspan="2" align="center"><table width="90%" border="0" align="center" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td background="{IMGDIR}row.gif" height="1"></td>
+                </tr>
+              </table></td>
+			  </tr>
+			<tr>
+			  <td height="30" align="center">注册 E-mail </td>
+			  <td height="30" align="left"><input name="email" type="text" class="input" id="email" value="{EMAIL}" size="50"></td>
+			  </tr>
+			<tr>
+			  <td height="1" colspan="2" align="center"><table width="90%" border="0" align="center" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td background="{IMGDIR}row.gif" height="1"></td>
+                </tr>
+              </table></td>
+			  </tr>
+			<tr>
+			  <td height="30" align="center">密码问题</td>
+			  <td height="30" align="left"><input name="question" type="text" class="input" id="question" value="{QUESTION}" size="80"></td>
+			  </tr>
+			<tr>
+			  <td height="1" colspan="2" align="center"><table width="90%" border="0" align="center" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td background="{IMGDIR}row.gif" height="1"></td>
+                </tr>
+              </table></td>
+			  </tr>
+			<tr>
+			  <td height="30" align="center">问题回答</td>
+			  <td height="30" align="left"><input name="answer" type="text" class="input" id="answer" size="80"></td>
+			  </tr>
+			<tr>
+			  <td height="1" colspan="2" align="center"><table width="90%" border="0" align="center" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td background="{IMGDIR}row.gif" height="1"></td>
+                </tr>
+              </table></td>
+			  </tr>
+			<tr>
+			  <td height="30" align="center">登陆次数</td>
+			  <td height="30" align="left">{LOGINS}</td>
+			</tr>
+			<tr>
+			  <td height="1" colspan="2" align="center"><table width="90%" border="0" align="center" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td background="{IMGDIR}row.gif" height="1"></td>
+                </tr>
+              </table></td>
+			  </tr>
+			<tr>
+			<tr>
+			  <td height="30" align="center">注册时间</td>
+			  <td height="30" align="left">{REGTIME}</td>
+			</tr>
+			<tr>
+			  <td height="1" colspan="2" align="center"><table width="90%" border="0" align="center" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td background="{IMGDIR}row.gif" height="1"></td>
+                </tr>
+              </table></td>
+			  </tr>
+			<tr>
+			  <td height="35" colspan="2" align="center"><input name="save_pwd" type="submit" class="input" id="save_pwd" value=" 保 存 ">
+			    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+			    <input name="reset" type="reset" class="input" id="reset" value=" 重 设 "></td>
+			</tr>
+			</form>
+          </table>
+		  </td>
+        </tr>
+      </table>
+      <table width="581" height="15"  border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td width="581" height="15" background="{IMGDIR}control/center_down.gif"></td>
+        </tr>
+      </table></td>
+  </tr>
+</table>

@@ -1,0 +1,104 @@
+<link href="../../css/style.css" rel="stylesheet" type="text/css">
+<table width="776" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td><TABLE ><TR><TD height="3"></TD></TR></TABLE>
+		<table width="776" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+          <td><img src="{IMGDIR}global/top.gif" width="776" height="4"></td>
+        </tr>
+        <tr>
+          <td height="25" valign="bottom" background="{IMGDIR}global/mainbg.gif">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;◎&nbsp;&nbsp;&nbsp;&nbsp;推 荐 此 条 信 息 给 好 友</td>
+        </tr>
+        <tr>
+          <td height="5" background="{IMGDIR}global/mainbg.gif"></td>
+        </tr>
+		<tr>
+		  <td align="center" background="{IMGDIR}global/mainbg.gif">
+		  <table width="730"  border="0" cellpadding="0" cellspacing="0" class="td_four">
+            <form action="view.php?action=mail" method="post">
+			<tr>
+              <td width="20%" height="30" align="center">收&nbsp;件&nbsp;人 邮 箱</td>
+              <td colspan="3"><input name="recemail" type="text" class="input" id="recemail" size="50"></td>
+              </tr>
+            <tr align="center">
+              <td height="1" colspan="4">
+			  <table width="680"  border="0" align="center" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td height="1" background="{IMGDIR}row.gif"></td>
+                </tr>
+              </table>
+			  </td>
+            </tr>
+            <tr>
+              <td width="20%" height="30" align="center">发 件 人</td>
+              <td width="30%"><input name="sendemail" type="text" class="input" id="sendemail" size="40"></td>
+              <td width="20%" align="center">发送人邮箱</td>
+              <td width="30%"><input name="sendname" type="text" class="input" id="sendname" size="30"></td>
+            </tr>
+            <tr align="center">
+              <td height="1" colspan="4">
+			  <table width="680"  border="0" align="center" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td height="1" background="{IMGDIR}row.gif"></td>
+                </tr>
+              </table>
+			  </td>
+            </tr>
+            <tr>
+              <td width="20%" height="30" align="center">邮件标题</td>
+              <td colspan="3">{MAILTITLE}
+                <input name="mailtitle" type="hidden" id="mailtitle" value="{MAILTITLE}">
+                <input name="maillink" type="hidden" id="maillink" value="{MAILLINK}"></td>
+            </tr>
+            <tr align="center">
+              <td height="1" colspan="4">
+			  <table width="680"  border="0" align="center" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td height="1" background="{IMGDIR}row.gif"></td>
+                </tr>
+              </table>
+			  </td>
+            </tr>
+            <tr>
+              <td width="20%" height="30" align="center">邮件内容</td>
+              <td colspan="3"><table width="98%"  border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td height="5"></td>
+                </tr>
+                <tr>
+                  <td><textarea name="context" cols="80" rows="10" wrap="VIRTUAL" id="context">{MAILLINK}</textarea></td>
+                </tr>
+                <tr>
+                  <td height="5"></td>
+                </tr>
+              </table></td>
+            </tr>
+            <tr align="center">
+              <td height="1" colspan="4">
+			  <table width="680"  border="0" align="center" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td height="1" background="{IMGDIR}row.gif"></td>
+                </tr>
+              </table>
+			  </td>
+            </tr>
+            <tr align="center">
+              <td height="30" colspan="4"><input name="send" type="submit" class="input" id="send" value=" 提 交 ">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input name="reset" type="reset" class="input" id="reset" value=" 重 设 ">
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input name="back" type="button" class="input" id="back" onClick="javascript:history.go(-1)" value=" 返 回 "></td>
+            </tr>
+			</form>
+          </table></td>
+	    </tr>
+		<tr>
+          <td height="10" align="center" background="{IMGDIR}global/mainbg.gif"></td>
+        </tr>
+        <tr>
+          <td><img src="{IMGDIR}global/down.gif" width="776" height="4"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>

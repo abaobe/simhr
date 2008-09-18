@@ -1,0 +1,452 @@
+<table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="188" align="center">
+	<table width="188"  border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="188" height="37" align="center" background="{IMGDIR}small_top.gif">用户信息</td>
+      </tr>
+      <tr>
+        <td align="center" background="{IMGDIR}small_bg.gif">{USERINFO}</td>
+      </tr>
+      <tr>
+        <td align="center"><img src="{IMGDIR}small_down.gif" width="188" height="11"></td>
+      </tr>
+	  <tr>
+        <td width="188" height="37" align="center" background="{IMGDIR}small_top.gif">职位查询</td>
+      </tr>
+      <tr>
+        <td align="center" background="{IMGDIR}small_bg.gif"><table border="0" align="center" cellpadding="0" cellspacing="1">
+          <form action="search.php" method="post">
+            <tr>
+              <td align="center">时&nbsp;&nbsp;间</td>
+              <td>&nbsp;
+                  <select name="addtime" id="forlong" class="input">{SELECT_TIME}</select></td>
+            </tr>
+            <tr>
+              <td align="center">性&nbsp;&nbsp;别</td>
+              <td>&nbsp;
+                  <select name="sex" id="sex" class="input">{SELECT_SEX}</select></td>
+            </tr>
+            <tr>
+              <td align="center">学&nbsp;&nbsp;历</td>
+              <td>&nbsp;
+                  <select name="edu" class="input" id="edu" >{SELECT_EDU}</select></td>
+            </tr>
+            <tr>
+              <td align="center">职位名</td>
+              <td>&nbsp;
+                  <input name="job" type="text" id="job" size="10" class="input"></td>
+            </tr>
+            <tr>
+              <td align="center">工作地</td>
+              <td>&nbsp;
+                  <input name="address" type="text" class="input" size="10"></td>
+            </tr>
+            <tr align="center">
+              <td colspan="2"><input name="submit_job" type="submit" class="input" id="search_job" value=" 提交查询 "></td>
+            </tr>
+          </form>
+        </table></td>
+      </tr>
+      <tr>
+        <td align="center"><img src="{IMGDIR}small_down.gif" width="188" height="11"></td>
+      </tr>
+	  <tr>
+        <td width="188" height="37" align="center" background="{IMGDIR}small_top.gif">人才查询</td>
+      </tr>
+      <tr>
+        <td height="130" align="center" background="{IMGDIR}small_bg.gif"><table border="0" align="center" cellpadding="0" cellspacing="1">
+          <form action="search.php" method="post">
+            <tr>
+              <td align="center">时间</td>
+              <td>&nbsp;
+                  <select name="addtime" id="sex" class="input">{SELECT_TIME}</select></td>
+            </tr>
+            <tr>
+              <td align="center">性别</td>
+              <td>&nbsp;
+                  <select name="sex" id="sex" class="input">{SELECT_SEX}</select></td>
+            </tr>
+            <tr>
+              <td align="center">学历</td>
+              <td>&nbsp;
+                  <select name="edu" class="input" id="edu">{SELECT_EDU}</select></td>
+            </tr>
+            <tr>
+              <td align="center">职位</td>
+              <td>&nbsp;
+                <input name="job" type="text" id="job" size="10" class="input"></td>
+            </tr>
+            <tr>
+              <td align="center">专业</td>
+              <td>&nbsp;
+                  <input name="zhuanyename" type="text" id="zhuanyename" size="10" class="input"></td>
+            </tr>
+            <tr>
+              <td align="center">学校</td>
+              <td>&nbsp;
+                  <input name="graedu" type="text" id="graedu" size="10" class="input"></td>
+            </tr>
+            <tr align="center">
+              <td colspan="2"><input name="submit_find" type="submit" class="input" id="search_find" value=" 提交查询 "></td>
+            </tr>
+          </form>
+        </table></td>
+      </tr>
+      <tr>
+        <td align="center"><img src="{IMGDIR}small_down.gif" width="188" height="11"></td>
+      </tr>
+    </table>
+	</td>
+    <td align="center">
+<!--news start-->
+	<table width="588" height="199" border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td width="302" valign="top"><table width="302" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td width="302"><img src="{IMGDIR}/index/mainad_top.gif" width="302" height="12"></td>
+            </tr>
+            <tr>
+              <td height="177" background="{IMGDIR}/index/mainad_bg.gif"><table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td width="5%">&nbsp;</td>
+                    <td width="84%" align="center"><table width="98%" height="98%" border="0" cellpadding="0" cellspacing="0">
+                        <tr>
+                          <td align="center" valign="middle"><img src="{IMGDIR}/index/mainad.gif" width="242" height="167"></td>
+                        </tr>
+                    </table></td>
+                    <td width="11%">&nbsp;</td>
+                  </tr>
+              </table></td>
+            </tr>
+            <tr>
+              <td><img src="{IMGDIR}/index/mainad_down.gif" width="302" height="11"></td>
+            </tr>
+        </table></td>
+        <td valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td><table width="286" height="36" border="0" cellpadding="0" cellspacing="0" background="images/news/news-top.gif">
+                  <tr>
+                    <td width="286" background="{IMGDIR}/index/news-top.gif"><table width="286" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td width="201">&nbsp;</td>
+                        <td width="85"><a href="news.php"><img src="{IMGDIR}/index/more.gif" width="51" height="30" border="0"></a></td>
+                      </tr>
+                    </table></td>
+                  </tr>
+              </table></td>
+            </tr>
+            <tr>
+              <td height="158" align="center" valign="top" background="{IMGDIR}/index/news-bg.gif">
+			  <table width="100%"  border="0" cellspacing="0" cellpadding="0">
+			  <!-- BEGIN news -->
+                <tr>
+                  <td height="24">&nbsp;{NEWS_TIME}&nbsp;<A HREF="{NEWS_LINK}" target="_blank">{NEWS_TITLE}</A></td>
+                </tr>
+                <tr>
+                  	<td height="1">
+					<table width="90%"  border="0" cellspacing="0" cellpadding="0" height="1">
+					  <tr>
+						<td background="{IMGDIR}/row.gif"></td>
+					  </tr>
+					</table>
+					</td>
+                </tr>
+              <!-- END news -->
+			  </table>
+			  </td>
+            </tr>
+            <tr>
+              <td><img src="{IMGDIR}/index/news-down.gif" width="286" height="6"></td>
+            </tr>
+        </table></td>
+      </tr>
+    </table>
+
+	<table width="588" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="276" valign="top">
+		<table width="100%" height="37" border="0" cellpadding="0" cellspacing="0" background="{IMGDIR}/index/px_top.gif">
+            <tr>
+              <td>
+			  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td width="83%">&nbsp;</td>
+                    <td width="17%"><a href="learn.php?action=lesson"><img src="{IMGDIR}/index/more.gif" width="51" height="30" border="0"></a></td>
+                  </tr>
+              </table>
+			  </td>
+            </tr>
+          </table>
+            <table width="100%" height="150" border="0" cellpadding="0" cellspacing="0" background="{IMGDIR}/index/px_bg.gif">
+              <tr>
+                <td valign="top">
+				<table width="100%" border="0" cellspacing="0" cellpadding="0">
+				<!-- BEGIN lesson -->
+                    <tr height="23">
+                      <td width="6%">&nbsp;</td>
+                      <td align="left">{LESSON_TIME}&nbsp;<a href="{LESSON_LINK}" target="_blank">{LESSON_NAME}</a></td>
+                    </tr>
+                    <tr>
+                      <td height="1"></td>
+                      <td><table width="96%"  border="0" cellspacing="0" cellpadding="0" height="1">
+                        <tr>
+                          <td background="{IMGDIR}/row.gif"></td>
+                        </tr>
+                      </table>
+					  </td>
+                    </tr>
+                <!-- END lesson -->
+				</table></td>
+              </tr>
+            </table>
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td><img src="{IMGDIR}/index/px_down.gif" width="276" height="9"></td>
+              </tr>
+          </table>
+		</td>
+        <td valign="top">
+		<table width="311" height="210" border="0" cellpadding="0" cellspacing="0" background="images/cnter-02/zxpx-01.gif">
+            <tr>
+              <td height="210" background="{IMGDIR}/index/count_top.gif">
+			  <table width="294" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td height="10" colspan="2"></td>
+                    </tr>
+                  <tr>
+                    <td width="183">&nbsp;</td>
+                    <td width="128" height="26" align="right"><a href="register.php"><img src="{IMGDIR}/index/reg_com.gif" width="112" height="21" border="0"></a></td>
+                  </tr>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td height="26" align="right"><a href="register.php"><img src="{IMGDIR}/index/reg_per.gif" width="112" height="21" border="0"></a></td>
+                  </tr>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td height="26" align="right"><a href="learn.php?action=school"><img src="{IMGDIR}/index/px_school.gif" width="73" height="21" border="0"></a></td>
+                  </tr>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td height="26" align="right"><a href="jobway.php"><img src="{IMGDIR}/index/px_way.gif" width="73" height="21" border="0"></a></td>
+                  </tr>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td height="26" align="right"><a href="joblaw.php"><img src="{IMGDIR}/index/px_law.gif" width="73" height="21" border="0"></a></td>
+                  </tr>
+                  <tr>
+                    <td rowspan="3">&nbsp;</td>
+                    <td align="right">&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td align="right">&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td align="right">&nbsp;</td>
+                  </tr>
+              </table></td>
+            </tr>
+        </table></td>
+      </tr>
+    </table>
+	<table width="588" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="378" height="110" align="center" valign="middle"><!--ad content--></td>
+        <td width="210" align="left" background="images/cnter-02/bgg.gif"><table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
+            <tr>
+              <td height="106" align="center" valign="middle" background="{IMGDIR}/index/count_bg.gif"><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+                  <link href="css/style.css" rel="stylesheet" type="text/css">
+                  <table border="0" align="center" cellpadding="0" cellspacing="0">
+                    <tr>
+                      <td><font color="#996600">会员总数 : <b>{MEMBERS}</b></font></td>
+                    </tr>
+                    <tr>
+                      <td><font color="#996600">企业会员 : <b>{MEMBER_COM}</b>(家)</font></td>
+                    </tr>
+                    <tr>
+                      <td><font color="#996600">个人会员 : <b>{MEMBER_PER}</b>&nbsp;(位)</font></td>
+                    </tr>
+                    <tr>
+                      <td><font color="#996600">共有职位 : <b>{JOBS}</b>&nbsp;(条)</font></td>
+                    </tr>
+                    <tr>
+                      <td><font color="#996600">共有简历 : <b>{FINDS}</b>&nbsp;(封)</font></td>
+                    </tr>
+                </table></td>
+            </tr>
+            <tr>
+              <td><img src="{IMGDIR}/index/count_down.gif" width="209" height="4"></td>
+            </tr>
+        </table></td>
+      </tr>
+    </table>
+	</td>
+  </tr>
+</table>
+<!---new job start--->
+<table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="581" align="center">
+	<table width="581" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="581" height="36" align="right" background="{IMGDIR}/job/center_top.gif"><a href="job.php"><img src="{IMGDIR}/more.gif" width="95" height="36" border="0"></a></td>
+      </tr>
+      <tr>
+        <td align="center" background="{IMGDIR}/job/center_bg.gif"><table width="550"  border="0" cellpadding="0" cellspacing="0" class="td_four">
+          <tr bgcolor="#f8f8f8">
+            <td height="25" align="center">职位名称</td>
+            <td height="25" align="center">招聘企业</td>
+            <td height="25" align="center">学历要求</td>
+            <td height="25" align="center">招聘人数</td>
+            <td height="25" align="center">发布时间</td>
+          </tr>
+          <!-- BEGIN job -->
+          <tr>
+            <td height="25" align="center"><a href="{JOB_LINK}" target="_blank">{JOB_NAME}</a></td>
+            <td height="25" align="center"><a href="{COM_LINK}" target="_blank">{COMPANY}</a></td>
+            <td height="25" align="center">{JOB_EDU}</td>
+            <td height="25" align="center">{JOB_MAN}</td>
+            <td height="25" align="center">{JOB_TIME}</td>
+          </tr>
+          <tr>
+            <td height="1" colspan="5"><table width="97%"  border="0" align="center" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td background="{IMGDIR}row.gif" height="1"></td>
+                </tr>
+            </table></td>
+          </tr>
+          <!-- END job -->
+          <tr align="center" valign="middle">
+            <td height="5" colspan="5"></td>
+          </tr>
+        </table></td>
+      </tr>
+      <tr>
+        <td><img src="{IMGDIR}/job/center_down.gif" width="581" height="15"></td>
+      </tr>
+    </table>
+	</td>
+    <td align="center">
+	<table border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td width="188" height="37" align="center" background="{IMGDIR}/small_top.gif">最新企业</td>
+      </tr>
+      <tr>
+        <td align="center" background="{IMGDIR}/small_bg.gif">
+		<table width="125" border="0" cellspacing="0" cellpadding="0">
+        <!-- BEGIN company -->
+		  <tr>
+            <td height="24">{NEW_COMPANY}</td>
+          </tr>
+          <tr>
+            <td height="1" background="{IMGDIR}/row.gif"></td>
+          </tr>
+        <!-- END company -->
+		  <tr>
+            <td height="5"></td>
+          </tr>
+        </table></td>
+      </tr>
+      <tr>
+        <td width="188" height="11"><img src="{IMGDIR}/small_down.gif" width="188" height="11"></td>
+      </tr>
+    </table>
+	</td>
+  </tr>
+</table>
+<!---new job end--->
+<!---new find start--->
+<table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="581" align="center">
+	<table width="581" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="581" height="36" align="right" background="{IMGDIR}/find/center_top.gif"><a href="find.php"><img src="{IMGDIR}/more.gif" width="95" height="36" border="0"></a></td>
+      </tr>
+      <tr>
+        <td align="center" background="{IMGDIR}/find/center_bg.gif"><table width="550"  border="0" cellpadding="0" cellspacing="0" class="td_four">
+          <tr bgcolor="#f8f8f8">
+            <td height="25" align="center">职位名称</td>
+            <td height="25" align="center">姓名</td>
+            <td height="25" align="center">性别</td>
+            <td height="25" align="center">出生年月</td>
+            <td align="center">学历</td>
+            <td height="25" align="center">发布时间</td>
+          </tr>
+          <!-- BEGIN find -->
+          <tr>
+            <td height="25" align="center"><a href="{FIND_LINK}" target="_blank">{FIND_NAME}</A></td>
+            <td height="25" align="center"><a href="{PER_LINK}" target="_blank">{TRUENAME}</a></td>
+            <td height="25" align="center">{FIND_SEX}</td>
+            <td height="25" align="center">{FIND_BIRTH}</td>
+            <td height="25" align="center">{FIND_EDU}</td>
+            <td height="25" align="center">{FIND_TIME}</td>
+          </tr>
+          <tr>
+            <td height="1" colspan="6"><table width="97%"  border="0" align="center" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td background="{IMGDIR}row.gif" height="1"></td>
+                </tr>
+            </table></td>
+          </tr>
+          <!-- END find -->
+          <tr align="center" valign="middle">
+            <td height="5" colspan="6"></td>
+          </tr>
+        </table></td>
+      </tr>
+      <tr>
+        <td><img src="{IMGDIR}/find/center_down.gif" width="581" height="15"></td>
+      </tr>
+    </table>
+	</td>
+    <td align="center">
+	<table border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td width="188" height="37" align="center" background="{IMGDIR}/small_top.gif">最新个人</td>
+      </tr>
+      <tr>
+        <td align="center" background="{IMGDIR}/small_bg.gif">
+		<table width="125" border="0" cellspacing="0" cellpadding="0">
+        <!-- BEGIN personal -->
+		  <tr>
+            <td height="24">[<a href="{PERSONAL_LINK}" target="_blank">{PERSONAL}</a>]&nbsp;&nbsp;{SEX}</td>
+          </tr>
+          <tr>
+            <td height="1" background="{IMGDIR}/row.gif"></td>
+          </tr>
+        <!-- END personal -->
+		  <tr>
+            <td height="5"></td>
+          </tr>
+        </table></td>
+      </tr>
+      <tr>
+        <td width="188" height="11"><img src="{IMGDIR}/small_down.gif" width="188" height="11"></td>
+      </tr>
+    </table>
+	</td>
+  </tr>
+</table>
+<!---new find end--->
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+ <tr>
+  <td height="5"></td>
+ </tr>
+ <tr>
+  <td height="1" bgcolor="#dddddd"></td>
+ </tr>
+</table>
+<table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td align="left">
+	<table border="0" cellspacing="0" cellpadding="4">
+      <tr>
+        <!-- BEGIN freelink -->
+		<td>{FREELINK}</td>{LINKTR}
+		<!-- END freelink -->
+      </tr>
+    </table>
+	</td>
+  </tr>
+</table>

@@ -1,0 +1,335 @@
+<link href="../../css/style.css" rel="stylesheet" type="text/css">
+<table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="188" align="center">{PERCP}	</td>
+    <td align="center"><table width="581" height="36"  border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td width="581" height="36" background="{IMGDIR}/control/manageperhunter.gif"></td>
+      </tr>
+    </table>
+      <table width="581" height="36"  border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td width="581" align="center" valign="top" background="{IMGDIR}control/center_bg.gif">
+		  <table width="550" border="0" align="center" cellpadding="0" cellspacing="0" class="td_four">
+            <form action="personal.php?action=managehunter" method="post" name="waneinfo" onsubmit="return checkform(this)">
+              <tr align="left" bgcolor="#f9f9f9">
+                <td height="25" colspan="4">&nbsp;&nbsp;&nbsp;&nbsp;<font color="#FF6600">〖 基 本 资 料 〗</font> </td>
+              </tr>
+			  <tr>
+                <td height="1" colspan="4" align="center" bgcolor="#e8e8e8"></td>
+              </tr>
+              <tr>
+                <td width="15%" height="25" align="center">真实姓名</td>
+                <td width="35%" align="left"><input name="truename" type="text" class="input" id="truename" value="{TRUENAME}" maxlength="6"></td>
+                <td width="15%" align="center">目前行业</td>
+                <td width="35%" height="25" align="left"><select name="industry" class="input" id="industry">{SELECT_INDUSTRY}</select></td>
+              </tr>
+              <tr>
+                <td height="1" colspan="4" align="center">
+				<table width="96%"  border="0" cellspacing="1" cellpadding="0">
+                  <tr>
+                    <td height="1" background="{IMGDIR}/row.gif"></td>
+                  </tr>
+                </table>
+				</td>
+                </tr>
+              <tr>
+                <td width="15%" height="25" align="center">目前年薪</td>
+                <td width="35%" align="left"><select name="year_pay" class="input" id="year_pay">{SELECT_YEARSALARY}</select></td>
+                <td width="15%" align="center">期待年薪</td>
+                <td width="35%" height="25" align="left"><select name="year_pay_for" class="input" id="year_pay_for">{SELECT_FORYEARSALARY}</select></td>
+              </tr>
+              <tr>
+                <td height="1" colspan="4" align="center">
+				<table width="96%"  border="0" cellspacing="1" cellpadding="0">
+                  <tr>
+                    <td height="1" background="{IMGDIR}/row.gif"></td>
+                  </tr>
+                </table>
+				</td>
+                </tr>
+              <tr>
+                <td width="15%" height="25" align="center">目前职位</td>
+                <td width="35%" align="left"><input name="position" type="text" class="input" id="position" value="{POSITION}"></td>
+                <td width="15%" align="center">期待职位</td>
+                <td width="35%" height="25" align="left"><input name="for_position" type="text" class="input" id="for_position" value="{FOR_POSITION}"></td>
+              </tr>
+              <tr>
+                <td height="1" colspan="4" align="center">
+				<table width="96%"  border="0" cellspacing="1" cellpadding="0">
+                  <tr>
+                    <td height="1" background="{IMGDIR}/row.gif"></td>
+                  </tr>
+                </table>
+				</td>
+                </tr>
+              <tr>
+                <td width="15%" height="25" align="center">有效期限</td>
+                <td height="25" colspan="3" align="left"><select name="days" class="input" id="days">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                  <option value="11">11</option>
+                  <option value="12">12</option>
+                  <option value="13">13</option>
+                  <option value="14">14</option>
+                  <option value="15">15</option>
+                  <option value="16">16</option>
+                  <option value="17">17</option>
+                  <option value="18">18</option>
+                  <option value="19">19</option>
+                  <option value="20">20</option>
+                  <option value="21">21</option>
+                  <option value="22">22</option>
+                  <option value="23">23</option>
+                  <option value="24">24</option>
+                  <option value="25">25</option>
+                  <option value="26">26</option>
+                  <option value="27">27</option>
+                  <option value="28">28</option>
+                  <option value="29">29</option>
+                  <option value="30" selected>30</option>
+                </select>  天
+                <input name="addtime" type="hidden" id="addtime" value="{ADDTIME}">
+                <input name="click" type="hidden" id="click" value="{CLICK}">
+                <input name="hunterid" type="hidden" id="hunterid" value="{HUNTERID}">
+                <input name="perhunter_htmlroot" type="hidden" id="perhunter_htmlroot" value="{HUNTER_ROOT}"></td>
+                </tr>
+			  <tr>
+                <td height="1" colspan="4" align="center" bgcolor="#e8e8e8"></td>
+              </tr>
+              <tr align="left">
+                <td height="25" colspan="4" bgcolor="#f9f9f9">&nbsp;&nbsp;&nbsp;&nbsp;<font color="#FF6600">〖 联 系 资 料 〗</font> </td>
+              </tr>
+			  <tr>
+                <td height="1" colspan="4" align="center" bgcolor="#e8e8e8"></td>
+              </tr>
+              <tr>
+                <td width="15%" height="25" align="center">手&nbsp;&nbsp;&nbsp;&nbsp;机</td>
+                <td width="35%" align="left"><input name="mobile" type="text" class="input" id="mobile" value="{MOBILE}" maxlength="12"></td>
+                <td width="15%" align="center">住宅电话</td>
+                <td width="35%" height="25" align="left"><input name="phone" type="text" class="input" id="phone" value="{PHONE}"></td>
+              </tr>
+              <tr>
+                <td height="1" colspan="4" align="center">
+				<table width="96%"  border="0" cellspacing="1" cellpadding="0">
+                  <tr>
+                    <td height="1" background="{IMGDIR}/row.gif"></td>
+                  </tr>
+                </table>
+				</td>
+                </tr>
+              <tr>
+                <td width="15%" height="25" align="center">联系地址</td>
+                <td width="35%" align="left"><input name="address" type="text" class="input" id="address" value="{ADDRESS}" size="45"></td>
+                <td width="15%" align="center">邮政编码</td>
+                <td width="35%" height="25" align="left"><input name="code" type="text" class="input" id="code" value="{CODE}"></td>
+              </tr>
+              <tr>
+                <td height="1" colspan="4" align="center">
+				<table width="96%"  border="0" cellspacing="1" cellpadding="0">
+                  <tr>
+                    <td height="1" background="{IMGDIR}/row.gif"></td>
+                  </tr>
+                </table>
+				</td>
+                </tr>
+              <tr>
+                <td width="15%" height="25" align="center">E - mail </td>
+                <td width="35%" align="left"><input name="email" type="text" class="input" id="email" value="{EMAIL}" size="35"></td>
+                <td width="15%" align="center">方便联系时间</td>
+                <td width="35%" height="25" align="left"><input name="linktime" type="text" class="input" id="linktime" value="{LINKTIME}"></td>
+              </tr>
+			  <tr>
+                <td height="1" colspan="4" align="center" bgcolor="#e8e8e8"></td>
+              </tr>
+              <tr align="left">
+                <td height="25" colspan="4" bgcolor="#f9f9f9">&nbsp;&nbsp;&nbsp;&nbsp;<font color="#FF6600">〖 个 人 概 况 〗</font> </td>
+              </tr>
+			  <tr>
+                <td height="1" colspan="4" align="center" bgcolor="#e8e8e8"></td>
+              </tr>
+              <tr>
+                <td width="15%" height="25" align="center">性别</td>
+                <td width="35%" align="left"><select name="sex" class="input" id="sex">{SELECT_SEX}</select></td>
+                <td width="15%" align="center">出生年月</td>
+                <td width="35%" height="25" align="left"><select name="year" class="input" id="year">{SELECT_YEAR}
+                </select>年<select name="month" class="input" id="month">{SELECT_MONTH}
+                </select>月<select name="day" class="input" id="day">{SELECT_DAY}
+                </select>日</td>
+              </tr>
+              <tr>
+                <td height="1" colspan="4" align="center">
+				<table width="96%"  border="0" cellspacing="1" cellpadding="0">
+                  <tr>
+                    <td height="1" background="{IMGDIR}/row.gif"></td>
+                  </tr>
+                </table>
+				</td>
+                </tr>
+              <tr>
+                <td width="15%" height="25" align="center">身份证</td>
+                <td width="35%" align="left"><input name="sidcard" type="text" class="input" id="sidcard" value="{SIDCARD}" size="25" maxlength="18"></td>
+                <td width="15%" align="center">婚姻状况</td>
+                <td width="35%" height="25" align="left"><select name="marry" class="input" id="marry">{SELECT_MARRY}</select></td>
+              </tr>
+              <tr>
+                <td height="1" colspan="4" align="center">
+				<table width="96%"  border="0" cellspacing="1" cellpadding="0">
+                  <tr>
+                    <td height="1" background="{IMGDIR}/row.gif"></td>
+                  </tr>
+                </table>
+				</td>
+                </tr>
+              <tr>
+                <td width="15%" height="25" align="center">户口所在地</td>
+                <td height="25" colspan="3" align="left"><select name="hukou" class="input" id="hukou">{SELECT_HUKOU}
+                </select>                  </td>
+                </tr>
+              <tr>
+                <td height="1" colspan="4" align="center">
+				<table width="96%"  border="0" cellspacing="1" cellpadding="0">
+                  <tr>
+                    <td height="1" background="{IMGDIR}/row.gif"></td>
+                  </tr>
+                </table>
+				</td>
+                </tr>
+              <tr>
+                <td width="15%" height="25" align="center">目前所在地</td>
+                <td height="25" colspan="3" align="left"><select name="living_1" class="input" id="living_1">{SELECT_NOWJZD}</select>
+                  <input name="living_2" type="text" class="input" id="living_2" value="{SELECT_JZD2}"></td></tr>
+              <tr>
+                <td height="1" colspan="4" align="center">
+				<table width="96%"  border="0" cellspacing="1" cellpadding="0">
+                  <tr>
+                    <td height="1" background="{IMGDIR}/row.gif"></td>
+                  </tr>
+                </table>
+				</td>
+                </tr>
+              <tr>
+                <td width="15%" height="25" align="center">工作所在地</td>
+                <td height="25" colspan="3" align="left"><select name="forliving_1" class="input" id="forliving_1"><option value="不限">不限</option>{SELECT_WORKADD}
+                </select>
+                  <input name="forliving_2" type="text" class="input" id="forliving_2" value="{WORK_ADD}"></td>
+              </tr>
+			  <tr>
+                <td height="1" colspan="4" align="center" bgcolor="#e8e8e8"></td>
+              </tr>
+              <tr align="left" bgcolor="#f9f9f9">
+                <td height="25" colspan="4" >&nbsp;&nbsp;&nbsp;&nbsp;<font color="#FF6600">〖 教 育 资 料 〗</font> </td>
+              </tr>
+			  <tr>
+                <td height="1" colspan="4" align="center" bgcolor="#e8e8e8"></td>
+              </tr>
+              <tr>
+                <td width="15%" height="25" align="center">最高学历</td>
+                <td width="35%" align="left"><select name="edu" class="input" id="edu">
+                  {SELECT_EDU}
+
+                </select></td>
+                <td width="15%" align="center">毕业学校</td>
+                <td width="35%" height="25" align="left"><input name="graedu" type="text" class="input" id="graedu" value="{GRAEDU}"></td>
+              </tr>
+              <tr>
+                <td height="1" colspan="4" align="center">
+				<table width="96%"  border="0" cellspacing="1" cellpadding="0">
+                  <tr>
+                    <td height="1" background="{IMGDIR}/row.gif"></td>
+                  </tr>
+                </table>
+				</td>
+                </tr>
+              <tr>
+                <td width="15%" height="25" align="center">专业类别</td>
+                <td width="35%" align="left"><select name="smajortype" class="input" onchange="m_change(this,this.form.smajorname)"></select></td>
+                <td width="15%" align="center">专业名称</td>
+                <td width="35%" height="25" align="left"><select name="smajorname" class="input"></select><script language=javascript>m_inits(document.waneinfo.smajortype,document.waneinfo.smajorname,"{ZHUANYE}","{ZHUANYENAME}")</script></td>
+              </tr>
+              <tr>
+                <td height="1" colspan="4" align="center">
+				<table width="96%"  border="0" cellspacing="1" cellpadding="0">
+                  <tr>
+                    <td height="1" background="{IMGDIR}/row.gif"></td>
+                  </tr>
+                </table>
+				</td>
+                </tr>
+              <tr>
+                <td width="15%" height="90" align="center">培训信息</td>
+                <td colspan="3" align="left"><textarea name="train" cols="100" rows="5" wrap="VIRTUAL" class="input" id="train">{TRAIN}</textarea></td>
+              </tr>
+			  <tr>
+                <td height="1" colspan="4" align="center" bgcolor="#e8e8e8"></td>
+              </tr>
+              <tr align="left">
+                <td height="25" colspan="4" bgcolor="#f9f9f9">&nbsp;&nbsp;&nbsp;&nbsp;<font color="#FF6600">〖 工 作 说 明 〗</font> </td>
+              </tr>
+			  <tr>
+                <td height="1" colspan="4" align="center" bgcolor="#e8e8e8"></td>
+              </tr>
+              <tr>
+                <td width="15%" height="25" align="center">工作经历</td>
+                <td height="90" colspan="3" align="left"><textarea name="workexp" cols="100" rows="5" wrap="VIRTUAL" class="input" id="workexp">{WORK_EXP}</textarea></td>
+                </tr>
+              <tr>
+                <td height="1" colspan="4" align="center">
+				<table width="96%"  border="0" cellspacing="1" cellpadding="0">
+                  <tr>
+                    <td height="1" background="{IMGDIR}/row.gif"></td>
+                  </tr>
+                </table>
+				</td>
+                </tr>
+              <tr>
+                <td width="15%" height="25" align="center">专业特长</td>
+                <td height="90" colspan="3" align="left"><textarea name="enable" cols="100" rows="5" wrap="VIRTUAL" class="input" id="enable">{ENABLE}</textarea></td>
+                </tr>
+              <tr>
+                <td height="1" colspan="4" align="center">
+				<table width="96%"  border="0" cellspacing="1" cellpadding="0">
+                  <tr>
+                    <td height="1" background="{IMGDIR}/row.gif"></td>
+                  </tr>
+                </table>
+				</td>
+                </tr>
+              <tr>
+                <td width="15%" height="25" align="center">个人综述</td>
+                <td height="90" colspan="3" align="left"><textarea name="context" cols="100" rows="5" wrap="VIRTUAL" class="input" id="context">{CONTEXT}</textarea></td>
+                </tr>
+              <tr>
+                <td height="1" colspan="4" align="center">
+				<table width="96%"  border="0" cellspacing="1" cellpadding="0">
+                  <tr>
+                    <td height="1" background="{IMGDIR}/row.gif"></td>
+                  </tr>
+                </table>
+				</td>
+                </tr>
+              <tr>
+                <td colspan="4" align="center" height="30"><input name="submit_hunter" type="submit" class="input" id="submit_hunter" value=" 提 交 ">
+                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <input name="Submit" type="reset" class="input" value=" 重 设 "></td>
+              </tr>
+            </form>
+          </table>
+		  </td>
+        </tr>
+      </table>
+      <table width="581" height="15"  border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td width="581" height="15" background="{IMGDIR}control/center_down.gif"></td>
+        </tr>
+      </table></td>
+  </tr>
+</table>

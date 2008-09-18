@@ -1,0 +1,129 @@
+<link href="../../css/style.css" rel="stylesheet" type="text/css">
+
+<table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="188" align="center">{PERCP}	</td>
+    <td align="center"><table width="581" height="36"  border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td width="581" height="36" background="{IMGDIR}control/forjob.gif"></td>
+      </tr>
+    </table>
+      <table width="581" height="36"  border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td width="581" align="center" valign="middle" background="{IMGDIR}control/center_bg.gif"><table width="550" border="0" align="center" cellpadding="0" cellspacing="0" class="td_four">
+            <form action="personal.php?action=forjob" method="post">
+              <tr>
+                <td width="25%" height="30" align="center">求职性质</td>
+                <td><select name="jobpro" id="jobpro">{SELECT_JOBPRO}</select></td>
+              </tr>
+              <tr align="center">
+                <td height="1" colspan="2"><table width="500" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td height="1" background="{IMGDIR}row.gif"></td>
+                    </tr>
+                </table></td>
+              </tr>
+              <tr>
+                <td width="25%" height="30" align="center">薪水要求</td>
+                <td><select name="formoney" id="formoney">{SELECT_JOBPRICE}</select></td>
+              </tr>
+              <tr align="center">
+                <td height="1" colspan="2"><table width="500" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td height="1" background="{IMGDIR}row.gif"></td>
+                    </tr>
+                </table></td>
+              </tr>
+              <tr>
+                <td width="25%" height="30" align="center">行业要求</td>
+                <td><input name="forjob" type="text" class="input" id="forjob" value="{FORJOB}" size="50" maxlength="50"></td>
+              </tr>
+              <tr align="center">
+                <td height="1" colspan="2"><table width="500" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td height="1" background="{IMGDIR}row.gif"></td>
+                    </tr>
+                </table></td>
+              </tr>
+              <tr>
+                <td width="25%" height="30" align="center">职能职位</td>
+                <td><input name="jobkind" type="text" class="input" id="jobkind" value="{JOBKIND}" size="50" maxlength="50"></td>
+              </tr>
+              <tr align="center">
+                <td height="1" colspan="2"><table width="500" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td height="1" background="{IMGDIR}row.gif"></td>
+                    </tr>
+                </table></td>
+              </tr>
+              <tr>
+                <td width="25%" height="30" align="center">单位性质</td>
+                <td>{SELECT_COMPRO}</td>
+              </tr>
+              <tr align="center">
+                <td height="1" colspan="2"><table width="500" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td height="1" background="{IMGDIR}row.gif"></td>
+                    </tr>
+                </table></td>
+              </tr>
+              <tr>
+                <td width="25%" height="30" align="center">工作地点</td>
+                <td><input name="jobaddress" type="text" class="input" id="jobaddress" value="{JOBADDRESS}" size="50"></td>
+              </tr>
+              <tr align="center">
+                <td height="1" colspan="2"><table width="500" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td height="1" background="{IMGDIR}row.gif"></td>
+                    </tr>
+                </table></td>
+              </tr>
+              <tr>
+                <td width="25%" height="30" align="center">要求提供住房</td>
+                <td><input name="forhouse" type="text" class="input" id="forhouse" value="{FORHOUSE}" size="30"></td>
+              </tr>
+              <tr align="center">
+                <td height="1" colspan="2"><table width="500" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td height="1" background="{IMGDIR}row.gif"></td>
+                    </tr>
+                </table></td>
+              </tr>
+              <tr>
+                <td width="25%" height="30" align="center">离职所需时间</td>
+                <td><input name="leavejobtime" type="text" class="input" id="leavejobtime" value="{LEAVEJOBTIME}" size="50" maxlength="50"></td>
+              </tr>
+              <tr align="center">
+                <td height="1" colspan="2"><table width="500" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td height="1" background="{IMGDIR}row.gif"></td>
+                    </tr>
+                </table></td>
+              </tr>
+              <tr>
+                <td width="25%" height="30" align="center">工作经历</td>
+                <td><textarea name="workjingli" cols="80" rows="5" wrap="VIRTUAL" class="input" id="workjingli">{WORKJINGLI}</textarea></td>
+              </tr>
+              <tr align="center">
+                <td height="1" colspan="2"><table width="500" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td height="1" background="{IMGDIR}row.gif"></td>
+                    </tr>
+                </table></td>
+              </tr>
+              <tr>
+                <td height="35" colspan="2" align="center"><input name="save" type="submit" class="input" id="save" value=" 保  存 ">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input name="reset" type="reset" class="input" id="reset" value=" 重  设 "></td>
+              </tr>
+            </form>
+          </table></td>
+        </tr>
+      </table>
+      <table width="581" height="15"  border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td width="581" height="15" background="{IMGDIR}control/center_down.gif"></td>
+        </tr>
+      </table></td>
+  </tr>
+</table>

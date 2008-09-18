@@ -1,0 +1,195 @@
+<link href="../../css/style.css" rel="stylesheet" type="text/css">
+<table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="188" align="center">{PERCP}	</td>
+    <td align="center"><table width="581" height="36"  border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td width="581" height="36" background="{IMGDIR}control/putfind.gif"></td>
+      </tr>
+    </table>
+      <table width="581" height="36"  border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td width="581" align="center" valign="middle" background="{IMGDIR}control/center_bg.gif"><table width="550" border="0" align="center" cellpadding="0" cellspacing="0" class="td_four">
+            <form action="personal.php?action=putfind" method="post">
+              <tr>
+                <td width="25%" height="30" align="center">职位名称</td>
+                <td><input name="job" type="text" class="input" id="job" size="50" maxlength="50">                  </td>
+              </tr>
+              <tr align="center">
+                <td height="1" colspan="2"><table width="500" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td height="1" background="{IMGDIR}row.gif"></td>
+                    </tr>
+                </table></td>
+              </tr>
+			  <tr>
+                <td width="25%" height="30" align="center">职位类别</td>
+                <td><select name="tid">{JOBTYPE}</select></td>
+              </tr>
+              <tr align="center">
+                <td height="1" colspan="2"><table width="500" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td height="1" background="{IMGDIR}row.gif"></td>
+                    </tr>
+                </table></td>
+              </tr>
+              <tr>
+                <td width="25%" height="30" align="center">工作地点</td>
+                <td><input name="work_address" type="text" class="input" id="work_address" size="50" maxlength="100">                  </td>
+              </tr>
+              <tr align="center">
+                <td height="1" colspan="2"><table width="500" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td height="1" background="{IMGDIR}row.gif"></td>
+                    </tr>
+                </table></td>
+              </tr>
+              <tr>
+                <td width="25%" height="30" align="center">工作说明</td>
+                <td><textarea name="jobtext" cols="80" rows="10" wrap="VIRTUAL" class="input" id="jobtext"></textarea></td>
+              </tr>
+              <tr align="center">
+                <td height="1" colspan="2"><table width="500" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td height="1" background="{IMGDIR}row.gif"></td>
+                    </tr>
+                </table></td>
+              </tr>
+              <tr>
+                <td width="25%" height="30" align="center">有效时间</td>
+                <td> <select name="days" class="input" id="days">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                  <option value="11">11</option>
+                  <option value="12">12</option>
+                  <option value="13">13</option>
+                  <option value="14">14</option>
+                  <option value="15">15</option>
+                  <option value="16">16</option>
+                  <option value="17">17</option>
+                  <option value="18">18</option>
+                  <option value="19">19</option>
+                  <option value="20">20</option>
+                  <option value="21">21</option>
+                  <option value="22">22</option>
+                  <option value="23">23</option>
+                  <option value="24">24</option>
+                  <option value="25">25</option>
+                  <option value="26">26</option>
+                  <option value="27">27</option>
+                  <option value="28">28</option>
+                  <option value="29">29</option>
+                  <option value="30" selected>30</option>
+                </select>
+                  (天) <input name="html_header" type="hidden" id="html_header" value="{HTMLHEADER}">
+                  <input name="html_center" type="hidden" id="html_center" value="{HTMLCENTER}">
+                  <input name="html_footer" type="hidden" id="html_footer" value="{HTMLFOOTER}"></td>
+              </tr>
+              <tr align="center">
+                <td height="1" colspan="2"><table width="500" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td height="1" background="{IMGDIR}row.gif"></td>
+                    </tr>
+                </table></td>
+              </tr>
+			  <tr>
+                <td width="25%" height="30" align="center">联 系 人</td>
+                <td>{TRUENAME}                  </td>
+              </tr>
+              <tr align="center">
+                <td height="1" colspan="2"><table width="500" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td height="1" background="{IMGDIR}row.gif"></td>
+                    </tr>
+                </table></td>
+              </tr>
+              <tr>
+                <td width="25%" height="30" align="center">联系方式</td>
+                <td>{CONTACT}                  </td>
+              </tr>
+              <tr align="center">
+                <td height="1" colspan="2"><table width="500" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td height="1" background="{IMGDIR}row.gif"></td>
+                    </tr>
+                </table></td>
+              </tr>
+              <tr>
+                <td width="25%" height="30" align="center">性&nbsp;&nbsp;&nbsp;&nbsp;别</td>
+                <td>{SEX}</td>
+              </tr>
+              <tr align="center">
+                <td height="1" colspan="2"><table width="500" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td height="1" background="{IMGDIR}row.gif"></td>
+                    </tr>
+                </table></td>
+              </tr>
+              <tr>
+                <td width="25%" height="30" align="center">学&nbsp;&nbsp;&nbsp;&nbsp;历</td>
+                <td>{EDU}</td>
+              </tr>
+              <tr align="center">
+                <td height="1" colspan="2"><table width="500" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td height="1" background="{IMGDIR}row.gif"></td>
+                    </tr>
+                </table></td>
+              </tr>
+              <tr>
+                <td width="25%" height="30" align="center">出生年月</td>
+                <td>{BIRTH}                  </td>
+              </tr>
+              <tr align="center">
+                <td height="1" colspan="2"><table width="500" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td height="1" background="{IMGDIR}row.gif"></td>
+                    </tr>
+                </table></td>
+              </tr>
+              <tr>
+                <td width="25%" height="30" align="center">专业类别</td>
+                <td>{ZHUANYE}</td>
+              </tr>
+              <tr align="center">
+                <td height="1" colspan="2"><table width="500" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td height="1" background="{IMGDIR}row.gif"></td>
+                    </tr>
+                </table></td>
+              </tr>
+              <tr>
+                <td width="25%" height="30" align="center">专业名称</td>
+                <td>{ZHUANYENAME}              </td>
+              </tr>
+              <tr align="center">
+                <td height="1" colspan="2"><table width="500" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td height="1" background="{IMGDIR}row.gif"></td>
+                    </tr>
+                </table></td>
+              </tr>
+              <tr>
+                <td height="35" colspan="2" align="center"><input name="{PUTFIND_NAME}" type="submit" class="input" id="{PUTFIND_NAME}" value="{PUTFIND_VALUE}">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input name="reset" type="reset" class="input" id="reset" value=" 重  设 "></td>
+              </tr>
+            </form>
+          </table></td>
+        </tr>
+      </table>
+      <table width="581" height="15"  border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td width="581" height="15" background="{IMGDIR}control/center_down.gif"></td>
+        </tr>
+      </table></td>
+  </tr>
+</table>

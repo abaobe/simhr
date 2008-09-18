@@ -1,0 +1,312 @@
+<link href="../../../css/style.css" rel="stylesheet" type="text/css">
+<table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="188" align="center">{COMCP}	</td>
+    <td align="center"><table width="581" height="36"  border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td width="581" height="36" background="{IMGDIR}control/putjob.gif"></td>
+      </tr>
+    </table>
+      <table width="581" height="36"  border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td width="581" align="center" valign="middle" background="{IMGDIR}control/center_bg.gif"><table width="550" border="0" align="center" cellpadding="0" cellspacing="0" class="td_four">
+            <form action="company.php?action=putjob" method="post" name="waneinfo" onsubmit="return checkform(this)">
+              <tr>
+                <td width="25%" height="30" align="center">职位名称</td>
+                <td colspan="3"><input name="job" type="text" class="input" id="job" size="50" maxlength="50">                  </td>
+              </tr>
+              <tr align="center">
+                <td height="1" colspan="4"><table width="500" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td height="1" background="{IMGDIR}row.gif"></td>
+                    </tr>
+                </table></td>
+              </tr>
+			  <tr>
+                <td width="25%" height="30" align="center">职位类别</td>
+                <td colspan="3"><select name="tid" class="input">{JOBTYPE}</select></td>
+              </tr>
+              <tr align="center">
+                <td height="1" colspan="4"><table width="500" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td height="1" background="{IMGDIR}row.gif"></td>
+                    </tr>
+                </table></td>
+              </tr>
+              <tr>
+                <td width="25%" height="30" align="center">工作地点</td>
+                <td colspan="3"><input name="address" type="text" class="input" id="address" size="50" maxlength="100">                  </td>
+              </tr>
+              <tr align="center">
+                <td height="1" colspan="4"><table width="500" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td height="1" background="{IMGDIR}row.gif"></td>
+                    </tr>
+                </table></td>
+              </tr>
+              <tr>
+                <td width="25%" height="30" align="center">工作性质</td>
+                <td width="25%"><select name="job_pro" class="input" id="job_pro">{SELECT_JOBPRO}</select></td>
+                <td width="25%" align="center">招聘人数</td>
+                <td width="25%"><input name="man" type="text" class="input" id="man" size="5" maxlength="5">
+                  &nbsp;(人)</td>
+              </tr>
+              <tr align="center">
+                <td height="1" colspan="4"><table width="500" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td height="1" background="{IMGDIR}row.gif"></td>
+                    </tr>
+                </table></td>
+              </tr>
+              <tr>
+                <td width="25%" height="30" align="center">工作年限</td>
+                <td width="25%"><input name="job_time" type="text" class="input" id="job_time" size="5" maxlength="5">
+                  &nbsp;(年)</td>
+                <td width="25%" align="center">工资水平</td>
+                <td width="25%"><select name="money" class="input" id="money">{SELECT_JOBPRICE}</select></td>
+              </tr>
+              <tr align="center">
+                <td height="1" colspan="4"><table width="500" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td height="1" background="{IMGDIR}row.gif"></td>
+                    </tr>
+                </table></td>
+              </tr>
+              <tr>
+                <td width="25%" height="30" align="center">性别要求</td>
+                <td width="25%"><select name="sex" class="input" id="sex">{SELECT_SEX}</select></td>
+                <td width="25%" align="center">年龄要求</td>
+                <td width="25%"><select name="age" class="input" id="age">{SELECT_JOBAGE}</select></td>
+              </tr>
+              <tr align="center">
+                <td height="1" colspan="4"><table width="500" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td height="1" background="{IMGDIR}row.gif"></td>
+                    </tr>
+                </table></td>
+              </tr>
+              <tr>
+                <td width="25%" height="30" align="center">身高要求</td>
+                <td width="25%"><input name="height" type="text" class="input" id="height" size="5" maxlength="5">
+                  &nbsp;(cm)</td>
+                <td width="25%" align="center">体重要求</td>
+                <td width="25%"><input name="weight" type="text" class="input" id="weight" size="5" maxlength="5">
+&nbsp;(kg)</td>
+              </tr>
+              <tr align="center">
+                <td height="1" colspan="4"><table width="500" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td height="1" background="{IMGDIR}row.gif"></td>
+                    </tr>
+                </table></td>
+              </tr>
+              <tr>
+                <td width="25%" height="30" align="center">视力要求</td>
+                <td width="25%"><input name="sight" type="text" class="input" id="sight" size="5" maxlength="5"></td>
+                <td width="25%" align="center">政治面貌</td>
+                <td width="25%"><select name="social" class="input" id="select3">{SELECT_SOCIAL}</select></td>
+              </tr>
+              <tr align="center">
+                <td height="1" colspan="4"><table width="500" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td height="1" background="{IMGDIR}row.gif"></td>
+                    </tr>
+                </table></td>
+              </tr>
+              <tr>
+                <td width="25%" height="30" align="center">专业要求</td>
+                <td width="25%"><select name="smajortype" class="input" onChange="m_change(this,this.form.smajorname)">
+                </select></td>
+                <td width="25%" align="center">学历要求</td>
+                <td width="25%">                  <select name="edu" class="input" id="select4">{SELECT_EDU}</select></td>
+              </tr>
+              <tr align="center">
+                <td height="1" colspan="4"><table width="500" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td height="1" background="{IMGDIR}row.gif"></td>
+                    </tr>
+                </table></td>
+              </tr>
+              <tr>
+                <td width="25%" height="30" align="center">专业名称</td>
+                <td width="25%"><select name="smajorname" class="input">
+                </select>
+                  <script language=javascript>m_inits(document.waneinfo.smajortype,document.waneinfo.smajorname,"不限","不限")</script></td>
+                <td width="25%" align="center">外语要求</td>
+                <td width="25%"><select name="eng" class="input" id="select5">{SELECT_ENGABLE}</select></td>
+              </tr>
+              <tr align="center">
+                <td height="1" colspan="4"><table width="500" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td height="1" background="{IMGDIR}row.gif"></td>
+                    </tr>
+                </table></td>
+              </tr>
+              <tr>
+                <td width="25%" height="30" align="center">有效时间</td>
+                <td colspan="3"><select name="days" id="days">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+          <option value="13">13</option>
+          <option value="14">14</option>
+          <option value="15">15</option>
+          <option value="16">16</option>
+          <option value="17">17</option>
+          <option value="18">18</option>
+          <option value="19">19</option>
+          <option value="20">20</option>
+          <option value="21">21</option>
+          <option value="22">22</option>
+          <option value="23">23</option>
+          <option value="24">24</option>
+          <option value="25">25</option>
+          <option value="26">26</option>
+          <option value="27">27</option>
+          <option value="28">28</option>
+          <option value="29">29</option>
+          <option value="30" selected>30</option>
+          <option value="31">31</option>
+          <option value="32">32</option>
+          <option value="33">33</option>
+          <option value="34">34</option>
+          <option value="35">35</option>
+          <option value="36">36</option>
+          <option value="37">37</option>
+          <option value="38">38</option>
+          <option value="39">39</option>
+          <option value="40">40</option>
+          <option value="41">41</option>
+          <option value="42">42</option>
+          <option value="43">43</option>
+          <option value="44">44</option>
+          <option value="45">45</option>
+          <option value="46">46</option>
+          <option value="47">47</option>
+          <option value="48">48</option>
+          <option value="49">49</option>
+          <option value="50">50</option>
+          <option value="51">51</option>
+          <option value="52">52</option>
+          <option value="53">53</option>
+          <option value="54">54</option>
+          <option value="55">55</option>
+          <option value="56">56</option>
+          <option value="57">57</option>
+          <option value="58">58</option>
+          <option value="59">59</option>
+          <option value="60">60</option>
+                    </select>
+                  <input name="html_header" type="hidden" id="html_header" value="{HTMLHEADER}">
+                  <input name="html_center" type="hidden" id="html_center" value="{HTMLCENTER}">
+                  <input name="html_footer" type="hidden" id="html_footer" value="{HTMLFOOTER}"></td>
+              </tr>
+              <tr align="center">
+                <td height="1" colspan="4"><table width="500" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td height="1" background="{IMGDIR}row.gif"></td>
+                    </tr>
+                </table></td>
+              </tr>
+			  <tr>
+                <td width="25%" height="30" align="center">工作说明</td>
+                <td height="119" colspan="3"><textarea name="worktext" cols="80" rows="8" wrap="VIRTUAL" class="input" id="worktext"></textarea></td>
+              </tr>
+			  <tr align="center">
+                <td height="1" colspan="4"><table width="500" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td height="1" background="{IMGDIR}row.gif"></td>
+                    </tr>
+                </table></td>
+              </tr>
+			  <tr>
+                <td width="25%" height="30" align="center">招聘单位</td>
+                <td colspan="3">{COMPANY}</td>
+              </tr>
+              <tr align="center">
+                <td height="1" colspan="4"><table width="500" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td height="1" background="{IMGDIR}row.gif"></td>
+                    </tr>
+                </table></td>
+              </tr>
+              <tr>
+                <td width="25%" height="30" align="center">联&nbsp;系&nbsp;人</td>
+                <td colspan="3">{CONTACT_NAME}                  </td>
+              </tr>
+              <tr align="center">
+                <td height="1" colspan="4"><table width="500" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td height="1" background="{IMGDIR}row.gif"></td>
+                    </tr>
+                </table></td>
+              </tr>
+              <tr>
+                <td width="25%" height="30" align="center">联系方式</td>
+                <td colspan="3">{CONTACT}</td>
+              </tr>
+              <tr align="center">
+                <td height="1" colspan="4"><table width="500" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td height="1" background="{IMGDIR}row.gif"></td>
+                    </tr>
+                </table></td>
+              </tr>
+              <tr>
+                <td width="25%" height="30" align="center">企业类型</td>
+                <td colspan="3">{QY_KIND}</td>
+              </tr>
+              <tr align="center">
+                <td height="1" colspan="4"><table width="500" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td height="1" background="{IMGDIR}row.gif"></td>
+                    </tr>
+                </table></td>
+              </tr>
+              <tr>
+                <td width="25%" height="30" align="center">企业地址</td>
+                <td colspan="3">{QY_ADDRESS}                  </td>
+              </tr>
+              <tr align="center">
+                <td height="1" colspan="4"><table width="500" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td height="1" background="{IMGDIR}row.gif"></td>
+                    </tr>
+                </table></td>
+              </tr>
+              <tr>
+                <td width="25%" height="30" align="center">邮政编码</td>
+                <td colspan="3">{QY_ZIPCODE}</td>
+              </tr>
+              <tr align="center">
+                <td height="1" colspan="4"><table width="500" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td height="1" background="{IMGDIR}row.gif"></td>
+                    </tr>
+                </table></td>
+              </tr>
+              <tr>
+                <td height="35" colspan="4" align="center"><input name="{PUTJOB_NAME}" type="submit" class="input" id="{PUTJOB_NAME}" value="{PUTJOB_VALUE}">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input name="reset" type="reset" class="input" id="reset" value=" 重  设 "></td>
+              </tr>
+            </form>
+          </table></td>
+        </tr>
+      </table>
+      <table width="581" height="15"  border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td width="581" height="15" background="{IMGDIR}control/center_down.gif"></td>
+        </tr>
+      </table></td>
+  </tr>
+</table>

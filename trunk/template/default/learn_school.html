@@ -1,0 +1,109 @@
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_jumpMenu(targ,selObj,restore){ //v3.0
+  eval(targ+".location='"+selObj.options[selObj.selectedIndex].value+"'");
+  if (restore) selObj.selectedIndex=0;
+}
+//-->
+</script>
+<table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="188" align="center"><table width="188"  border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="188" height="37" align="center" background="{IMGDIR}small_top.gif">用户信息</td>
+      </tr>
+      <tr>
+        <td align="center" background="{IMGDIR}small_bg.gif">{USERINFO}</td>
+      </tr>
+      <tr>
+        <td align="center"><img src="{IMGDIR}small_down.gif" width="188" height="11"></td>
+      </tr>
+      <tr>
+        <td width="188" height="37" align="center" background="{IMGDIR}small_top.gif">学校查询</td>
+      </tr>
+      <tr>
+        <td align="center" background="{IMGDIR}small_bg.gif"><table border="0" align="center" cellpadding="0" cellspacing="1">
+          <form action="search.php" method="post">
+            <tr>
+              <td colspan="2" align="center" background="images/xixian_line.gif"></td>
+            </tr>
+            <tr>
+              <td align="center">类别</td>
+              <td>&nbsp;
+                  <select name="schkind" class="input" id="schkind">
+                    {SELECT_SCHOOL}
+                </select></td>
+            </tr>
+            <tr>
+              <td colspan="2" align="center" background="images/xixian_line.gif"></td>
+            </tr>
+            <tr>
+              <td align="center">学校</td>
+              <td>&nbsp;
+                  <input name="sname" type="text" id="sname" size="10" class="input"></td>
+            </tr>
+            <tr>
+              <td colspan="2" align="center" background="images/xixian_line.gif"></td>
+            </tr>
+            <tr>
+              <td colspan="2" align="center" background="images/xixian_line.gif"></td>
+            </tr>
+            <tr align="center">
+              <td colspan="2"><input name="submit_school" type="submit" class="input" id="submit_school" value=" 提交查询 "></td>
+            </tr>
+          </form>
+        </table></td>
+      </tr>
+      <tr>
+        <td align="center"><img src="{IMGDIR}small_down.gif" width="188" height="11"></td>
+      </tr>
+    </table></td>
+    <td align="center">
+	<table width="581" height="36"  border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td width="581" height="36" align="right" background="{IMGDIR}control/school.gif"><table width="100%"  border="0" cellspacing="1" cellpadding="0">
+          <form name="form1">
+		  <tr>
+            <td>&nbsp;</td>
+            <td height="30" align="right" valign="bottom">
+              <select name="menu1" onChange="MM_jumpMenu('parent',this,0)" class="input">{JUMP_SCHOOL}</select>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+          </tr>
+		  </form>
+        </table></td>
+      </tr>
+    </table>
+      <table width="581" height="36"  border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td width="581" align="center" valign="top" background="{IMGDIR}control/center_bg.gif"><table width="550"  border="0" cellpadding="0" cellspacing="0" class="td_four">
+            <tr>
+              <td height="25" bgcolor="#F2F2F2">&nbsp;培训学校名称</td>
+              <td align="center" bgcolor="#F2F2F2">学校类别</td>
+              <td align="center" bgcolor="#F2F2F2">注册时间</td>
+            </tr>
+			<!-- BEGIN school_list -->
+			<tr>
+			  <td height="1" colspan="3" background="{IMGDIR}/row.gif"></td>
+			</tr>
+            <tr>
+              <td height="25">&nbsp;<a href="{SCHOOL_LINK}" target="_blank">{SCHOOL_NAME}</a></td>
+              <td align="center">{SCHOOL_TYPE}</td>
+              <td align="center">{ADDTIME}</td>
+            </tr>
+			<!-- END school_list -->
+			<tr>
+			  <td height="1" colspan="3" background="{IMGDIR}/row.gif"></td>
+			</tr>
+            <tr align="center">
+              <td height="35" colspan="3">{PAGELIST}</td>
+              </tr>
+          </table></td>
+        </tr>
+      </table>
+      <table width="581" height="15"  border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td width="581" height="15" background="{IMGDIR}control/center_down.gif"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>

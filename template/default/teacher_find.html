@@ -1,0 +1,119 @@
+<table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="188" align="center"><table width="188"  border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="188" height="37" align="center" background="{IMGDIR}small_top.gif">用户信息</td>
+      </tr>
+      <tr>
+        <td align="center" background="{IMGDIR}small_bg.gif">{USERINFO}</td>
+      </tr>
+      <tr>
+        <td align="center"><img src="{IMGDIR}small_down.gif" width="188" height="11"></td>
+      </tr>
+      <tr>
+        <td width="188" height="37" align="center" background="{IMGDIR}small_top.gif">人才查询</td>
+      </tr>
+      <tr>
+        <td align="center" background="{IMGDIR}small_bg.gif"><table border="0" align="center" cellpadding="0" cellspacing="1">
+          <form action="search.php" method="post">
+            <tr>
+              <td align="center">时&nbsp;&nbsp;间</td>
+              <td>&nbsp;
+                  <select name="addtime" id="addtime" class="input">
+
+
+                    {SELECT_TIME}
+
+
+                </select></td>
+            </tr>
+            <tr>
+              <td align="center">性&nbsp;&nbsp;别</td>
+              <td>&nbsp;
+                  <select name="sex" id="sex" class="input">
+
+                    {SELECT_SEX}
+
+                </select></td>
+            </tr>
+            <tr>
+              <td align="center">学&nbsp;&nbsp;历</td>
+              <td>&nbsp;
+                  <select name="edu" class="input" id="edu">
+
+                    {SELECT_TEDU}
+
+                </select></td>
+            </tr>
+            <tr>
+              <td align="center">标&nbsp;&nbsp;题</td>
+              <td>&nbsp;
+                  <input name="title" type="text" id="title" size="10" class="input"></td>
+            </tr>
+            <tr>
+              <td align="center">专&nbsp;&nbsp;业</td>
+              <td>&nbsp;
+                  <input name="zhuanye" type="text" id="zhuanye" size="10" class="input"></td>
+            </tr>
+            <tr>
+              <td align="center">居住地</td>
+              <td>&nbsp;
+                  <input name="living" type="text" id="living" size="10" class="input"></td>
+            </tr>
+            <tr align="center">
+              <td colspan="2"><input name="submit_tfind" type="submit" class="input" id="submit_tfind" value=" 提交查询 "></td>
+            </tr>
+          </form>
+        </table></td>
+      </tr>
+      <tr>
+        <td align="center"><img src="{IMGDIR}small_down.gif" width="188" height="11"></td>
+      </tr>
+    </table></td>
+    <td align="center">
+	<table width="581" height="36"  border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td width="581" height="36" align="right" background="{IMGDIR}control/teacher_find.gif">&nbsp;</td>
+        </tr>
+      </table>
+      <table width="581" height="36"  border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td width="581" align="center" valign="middle" background="{IMGDIR}control/center_bg.gif">
+		  <table width="550" border="0" align="center" cellpadding="0" cellspacing="0" class="td_four">
+            <tr bgcolor="#f5f5f5">
+              <td height="25" align="left">&nbsp;&nbsp;标题</td>
+              <td height="25" align="center">真实姓名</td>
+              <td height="25" align="center">性别</td>
+              <td height="25" align="center">学历</td>
+              <td height="25" align="center">发布时间</td>
+            </tr>
+            <!-- BEGIN findlist -->
+            <tr>
+              <td height="1" colspan="5" align="center" background="{IMGDIR}/row.gif"></td>
+            </tr>
+            <tr>
+              <td height="25" align="left">&nbsp;&nbsp;<a href="{FIND_LINK}" target="_blank">{FIND_TITLE}</a></td>
+              <td height="25" align="center">{FIND_NAME}</td>
+              <td height="25" align="center">{FIND_SEX}</td>
+              <td height="25" align="center">{FIND_EDU}</td>
+              <td height="25" align="center">{FIND_TIME}</td>
+            </tr>
+            <!-- END findlist -->
+            <tr>
+              <td height="1" colspan="5" align="center" background="{IMGDIR}/row.gif"></td>
+            </tr>
+            <tr height="30">
+              <td height="35" align="center" colspan="5">{PAGELIST}</td>
+            </tr>
+          </table>
+		  </td>
+        </tr>
+      </table>
+      <table width="581" height="15"  border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td width="581" height="15" background="{IMGDIR}control/center_down.gif"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>

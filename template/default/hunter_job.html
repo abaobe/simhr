@@ -1,0 +1,104 @@
+<table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="188" align="center"><table width="188"  border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td width="188" height="37" align="center" background="{IMGDIR}small_top.gif">用户信息</td>
+      </tr>
+      <tr>
+        <td align="center" background="{IMGDIR}small_bg.gif">{USERINFO}</td>
+      </tr>
+      <tr>
+        <td align="center"><img src="{IMGDIR}small_down.gif" width="188" height="11"></td>
+      </tr>
+      <tr>
+        <td width="188" height="37" align="center" background="{IMGDIR}small_top.gif">职位查询</td>
+      </tr>
+      <tr>
+        <td align="center" background="{IMGDIR}small_bg.gif"><table border="0" align="center" cellpadding="0" cellspacing="1">
+          <form action="search.php" method="post">
+            <tr>
+              <td height="24" align="center">时&nbsp;&nbsp;间</td>
+              <td height="24">&nbsp;
+                  <select name="addtime" id="addtime" class="input">
+                    {SELECT_TIME}
+                </select></td>
+            </tr>
+            <tr>
+              <td height="24" align="center">行&nbsp;&nbsp;业</td>
+              <td height="24">&nbsp;
+                  <select name="qykind" id="qykind" class="input">
+                    {SELECT_INDUSTRY}
+                </select></td>
+            </tr>
+            <tr>
+              <td height="24" align="center">职位名</td>
+              <td height="24">&nbsp;
+                  <input name="job" type="text" id="job" size="10" class="input"></td>
+            </tr>
+            <tr>
+              <td height="24" align="center">企业名</td>
+              <td height="24">&nbsp;
+                  <input name="qyname" type="text" id="qyname" size="10" class="input"></td>
+            </tr>
+            <tr>
+              <td height="24" align="center">工作地</td>
+              <td height="24">&nbsp;
+                  <input name="address" type="text" id="address" size="10" class="input"></td>
+            </tr>
+            <tr align="center">
+              <td height="24" colspan="2"><input name="submit_hunterjob" type="submit" class="input" id="submit_hunterjob" value=" 提交查询 "></td>
+            </tr>
+          </form>
+        </table></td>
+      </tr>
+      <tr>
+        <td align="center"><img src="{IMGDIR}small_down.gif" width="188" height="11"></td>
+      </tr>
+    </table></td>
+    <td align="center">
+	<table width="581" height="36"  border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td width="581" height="36" align="right" background="{IMGDIR}control/comhunter.gif">&nbsp;</td>
+      </tr>
+    </table>
+      <table width="581" height="36"  border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td width="581" align="center" valign="middle" background="{IMGDIR}control/center_bg.gif">
+		  <table width="550" border="0" align="center" cellpadding="0" cellspacing="0" class="td_four">
+
+            <tr bgcolor="#f5f5f5">
+              <td height="25" align="left">&nbsp;&nbsp;职位名称</td>
+              <td height="25" align="center">招聘企业</td>
+              <td height="25" align="center">发布时间</td>
+              <td height="25" align="center">截至时间</td>
+              <td height="25" align="center">查看</td>
+            </tr>
+			<!-- BEGIN comlist -->
+            <tr>
+              <td height="1" colspan="5" align="center" background="{IMGDIR}/row.gif"></td>
+            </tr>
+            <tr>
+              <td height="25" align="left">&nbsp;&nbsp;{COMJOB}</td>
+              <td height="25" align="center">{COMPANY}</td>
+              <td height="25" align="center">{COMPUT}</td>
+              <td height="25" align="center">{COMLOSE}</td>
+              <td height="25" align="center"><a href="{COMLINK}" target="_blank"><font color="#FF0000">详情</font></a></td>
+            </tr>
+			<!-- END comlist -->
+            <tr>
+              <td height="1" colspan="5" align="center" background="{IMGDIR}/row.gif"></td>
+            </tr>
+            <tr align="center">
+              <td height="35" colspan="5">{PAGELIST}</td>
+              </tr>
+          </table></td>
+        </tr>
+      </table>
+      <table width="581" height="15"  border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td width="581" height="15" background="{IMGDIR}control/center_down.gif"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>

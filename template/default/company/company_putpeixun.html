@@ -1,0 +1,277 @@
+<link href="../../../css/style.css" rel="stylesheet" type="text/css">
+<table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="188" align="center">{COMCP}	</td>
+    <td align="center"><table width="581" height="36"  border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td width="581" height="36" background="{IMGDIR}control/peixun_put.gif"></td>
+      </tr>
+    </table>
+      <table width="581" height="36"  border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td width="581" align="center" valign="middle" background="{IMGDIR}control/center_bg.gif">
+		  <table width="550"  border="0" align="center" cellpadding="0" cellspacing="1" class="td_four">
+            <form action="company.php?action=putpeixun" method="post">
+              <tr bgcolor="f3f3f3">
+                <td height="22" colspan="2" align="center" valign="middle">基 本 信 息</td>
+              </tr>
+              <tr>
+                <td width="23%" height="22" align="center" valign="middle">培训课程</td>
+                <td width="77%" height="22">&nbsp;
+                    <input name="lesson" type="text" class="input" id="lesson" size="40">&nbsp;&nbsp;<font color="#FF0000">(*)</font></td>
+              </tr>
+              <tr>
+                <td height="22" align="center" valign="middle">课程类型</td>
+                <td height="22">&nbsp;
+                    <select name="leixing" class="input" id="leixing">{LESSON_KIND}</select>&nbsp;&nbsp;<font color="#FF0000">(*)</font></td>
+              </tr>
+              <tr>
+                <td height="22" align="center" valign="middle">开课日期</td>
+                <td height="22">&nbsp;
+                    <input name="year1" type="text" class="input" id="year1" size="4" maxlength="4">
+        年
+        <select name="month1" class="input" id="month1">
+          <option value="01">1</option>
+          <option value="02">2</option>
+          <option value="03">3</option>
+          <option value="04">4</option>
+          <option value="05">5</option>
+          <option value="06">6</option>
+          <option value="07">7</option>
+          <option value="08">8</option>
+          <option value="09">9</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+        </select>
+        月
+        <select name="day1" class="input" id="day1">
+          <option value="01">1</option>
+          <option value="02">2</option>
+          <option value="03">3</option>
+          <option value="04">4</option>
+          <option value="05">5</option>
+          <option value="06">6</option>
+          <option value="07">7</option>
+          <option value="08">8</option>
+          <option value="09">9</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+          <option value="13">13</option>
+          <option value="14">14</option>
+          <option value="15">15</option>
+          <option value="16">16</option>
+          <option value="17">17</option>
+          <option value="18">18</option>
+          <option value="19">19</option>
+          <option value="20">20</option>
+          <option value="21">21</option>
+          <option value="22">22</option>
+          <option value="23">23</option>
+          <option value="24">24</option>
+          <option value="25">25</option>
+          <option value="26">26</option>
+          <option value="27">27</option>
+          <option value="28">28</option>
+          <option value="29">29</option>
+          <option value="30">30</option>
+          <option value="31">31</option>
+        </select>
+        日--
+        <input name="year2" type="text" class="input" id="year2" size="4" maxlength="4">
+        年
+        <select name="month2" class="input" id="select3">
+          <option value="01">1</option>
+          <option value="02">2</option>
+          <option value="03">3</option>
+          <option value="04">4</option>
+          <option value="05">5</option>
+          <option value="06">6</option>
+          <option value="07">7</option>
+          <option value="08">8</option>
+          <option value="09">9</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+        </select>
+        月
+        <select name="day2" class="input" id="select2">
+          <option value="01">1</option>
+          <option value="02">2</option>
+          <option value="03">3</option>
+          <option value="04">4</option>
+          <option value="05">5</option>
+          <option value="06">6</option>
+          <option value="07">7</option>
+          <option value="08">8</option>
+          <option value="09">9</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+          <option value="13">13</option>
+          <option value="14">14</option>
+          <option value="15">15</option>
+          <option value="16">16</option>
+          <option value="17">17</option>
+          <option value="18">18</option>
+          <option value="19">19</option>
+          <option value="20">20</option>
+          <option value="21">21</option>
+          <option value="22">22</option>
+          <option value="23">23</option>
+          <option value="24">24</option>
+          <option value="25">25</option>
+          <option value="26">26</option>
+          <option value="27">27</option>
+          <option value="28">28</option>
+          <option value="29">29</option>
+          <option value="30">30</option>
+          <option value="31">31</option>
+        </select>
+        日&nbsp;&nbsp;<font color="#FF0000">(*)</font></td>
+              </tr>
+              <tr>
+                <td height="22" align="center" valign="middle">上课时间</td>
+                <td height="22">&nbsp;
+                    <input name="class_time" type="text" class="input" id="class_time" value="" size="40">&nbsp;&nbsp;<font color="#FF0000">(*)</font></td>
+              </tr>
+              <tr>
+                <td height="22" align="center" valign="middle">上课地址</td>
+                <td height="22">&nbsp;
+                    <input name="address" type="text" class="input" id="address" size="50">&nbsp;&nbsp;<font color="#FF0000">(*)</font></td>
+              </tr>
+              <tr>
+                <td height="22" align="center" valign="middle">培训费用</td>
+                <td height="22">&nbsp;
+                    <input name="money" type="text" class="input" id="money" size="10">
+        (元)&nbsp;&nbsp;<font color="#FF0000">(*)</font></td>
+              </tr>
+              <tr>
+                <td height="22" align="center" valign="middle">学&nbsp;&nbsp;&nbsp;&nbsp;时</td>
+                <td height="22">&nbsp;
+                    <input name="classs" type="text" class="input" id="classs" size="20">&nbsp;&nbsp;<font color="#FF0000">(*)</font></td>
+              </tr>
+              <tr>
+                <td height="22" align="center" valign="middle">培训讲师</td>
+                <td height="22">&nbsp;
+                    <input name="teacher" type="text" class="input" id="teacher" size="20">&nbsp;&nbsp;<font color="#FF0000">(*)</font></td>
+              </tr>
+              <tr>
+                <td height="22" align="center" valign="middle">报名截至</td>
+                <td height="22" align="left" valign="middle">&nbsp;
+                    <input name="year" type="text" class="input" id="year" size="6" maxlength="4">
+        年
+        <select name="month" class="input" id="month">
+          <option value="01">1</option>
+          <option value="02">2</option>
+          <option value="03">3</option>
+          <option value="04">4</option>
+          <option value="05">5</option>
+          <option value="06">6</option>
+          <option value="07">7</option>
+          <option value="08">8</option>
+          <option value="09">9</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+        </select>
+        月
+        <select name="day" class="input" id="day">
+          <option value="01">1</option>
+          <option value="02">2</option>
+          <option value="03">3</option>
+          <option value="04">4</option>
+          <option value="05">5</option>
+          <option value="06">6</option>
+          <option value="07">7</option>
+          <option value="08">8</option>
+          <option value="09">9</option>
+          <option value="10">10</option>
+          <option value="11">11</option>
+          <option value="12">12</option>
+          <option value="13">13</option>
+          <option value="14">14</option>
+          <option value="15">15</option>
+          <option value="16">16</option>
+          <option value="17">17</option>
+          <option value="18">18</option>
+          <option value="19">19</option>
+          <option value="20">20</option>
+          <option value="21">21</option>
+          <option value="22">22</option>
+          <option value="23">23</option>
+          <option value="24">24</option>
+          <option value="25">25</option>
+          <option value="26">26</option>
+          <option value="27">27</option>
+          <option value="28">28</option>
+          <option value="29">29</option>
+          <option value="30">30</option>
+          <option value="31">31</option>
+        </select>
+        日&nbsp;&nbsp;<font color="#FF0000">(*)</font></td>
+              </tr>
+              <tr bgcolor="#f3f3f3">
+                <td height="22" colspan="2" align="center" valign="middle">联 系 信 息</td>
+              </tr>
+              <tr>
+                <td height="22" align="center" valign="middle">联 系 人</td>
+                <td height="22">&nbsp;
+                    <input name="contact_name" type="text" class="input" id="contact_name" size="20">&nbsp;&nbsp;<font color="#FF0000">(*)</font></td>
+              </tr>
+              <tr>
+                <td height="22" align="center" valign="middle">联系电话</td>
+                <td height="22">&nbsp;
+                    <input name="contact_phone" type="text" class="input" id="contact_phone" size="25">&nbsp;&nbsp;<font color="#FF0000">(*)</font></td>
+              </tr>
+              <tr>
+                <td height="22" align="center" valign="middle">传&nbsp;&nbsp;&nbsp;&nbsp;真</td>
+                <td height="22">&nbsp;
+                    <input name="fax" type="text" class="input" id="fax" size="25"></td>
+              </tr>
+              <tr>
+                <td height="22" align="center" valign="middle">E-mail</td>
+                <td height="22">&nbsp;
+                    <input name="email" type="text" class="input" id="email" size="40"></td>
+              </tr>
+              <tr>
+                <td height="22" align="center" valign="middle">学校网址</td>
+                <td height="22">&nbsp;
+                    <input name="url" type="text" class="input" id="url" size="50"></td>
+              </tr>
+              <tr bgcolor="f3f3f3">
+                <td height="22" colspan="2" align="center" valign="middle">备注信息</td>
+              </tr>
+              <tr>
+                <td height="22" align="center" valign="middle">培训目标</td>
+                <td height="22">&nbsp;
+                    <textarea name="direction" cols="90" rows="6" wrap="VIRTUAL" class="input" id="direction"></textarea></td>
+              </tr>
+              <tr>
+                <td height="22" align="center" valign="middle">培训内容</td>
+                <td height="22">&nbsp;
+                    <textarea name="content" cols="90" rows="6" wrap="VIRTUAL" class="input" id="content"></textarea>&nbsp;&nbsp;<font color="#FF0000">(*)</font></td>
+              </tr>
+              <tr>
+                <td height="22" align="center" valign="middle">其它说明</td>
+                <td height="22">&nbsp;
+                    <textarea name="context" cols="90" rows="6" wrap="VIRTUAL" class="input" id="context"></textarea></td>
+              </tr>
+              <tr bgcolor="f3f3f3">
+                <td height="30" colspan="2" align="center" valign="middle"><input name="submit_peixun" type="submit" class="input" value="发布培训">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input name="Submit2" type="reset" class="input" value="重置"></td>
+              </tr>
+            </form>
+          </table>
+          </td>
+        </tr>
+      </table>
+      <table width="581" height="15"  border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td width="581" height="15" background="{IMGDIR}control/center_down.gif"></td>
+        </tr>
+      </table></td>
+  </tr>
+</table>

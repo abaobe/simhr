@@ -1,0 +1,538 @@
+<?php
+	/*
+	+-------------------------------------------
+	|   Technology of SimPHP
+	|   ========================================
+	|   Powered by PHP365.CN
+	|   (c) 2007 php365.cn Power Services
+	|   http://www.php365.cn
+	|   ========================================
+	|   Web: http://www.php365.cn
+	+-------------------------------------------
+	|   > Last modify: 2004/12/27
+	+-------------------------------------------
+	*/
+
+	/*
+	+------------------
+	+	set global info
+	+------------------
+	*/
+
+	error_reporting(E_PARSE | E_WARNING | E_ERROR);
+	set_magic_quotes_runtime(0);
+
+	define ('IN_SIMHR',true);
+
+	require '../common/function.php';
+
+	$register_globals = @ini_get('register_globals');
+	$magic_quotes_gpc = get_magic_quotes_gpc();
+
+	if(!$register_globals || !$magic_quotes_gpc)
+	{
+		@extract(slashes($HTTP_POST_VARS), EXTR_SKIP);
+		@extract(slashes($HTTP_GET_VARS), EXTR_SKIP);
+	}
+
+	$step=$HTTP_POST_VARS[action]?$HTTP_POST_VARS[action]:$HTTP_GET_VARS[action];
+	function title_select($title_num)
+	{
+		global $step;
+		$step=empty($step)	?	'1'	:	$step;
+		$return	=	($step==$title_num)	?	'title_select'	:	'title';
+		return $return;
+	}
+	function folder_on($folder)
+	{
+		if (is_writable($folder))
+		{
+			$return='&nbsp;&nbsp;&nbsp;&nbsp;<font color=\'#6699cc\'>成功</font>';
+		}
+		else
+		{
+			$return='&nbsp;&nbsp;&nbsp;&nbsp;<font color=\'#ff0000\'>失败</font>&nbsp;&nbsp;&nbsp;&nbsp;<a href=\'?action=2&folder='.$folder.'\'><font color=\'#ff0000\'>立即更改</font></a>';
+		}
+		return $return;
+	}
+
+	switch ($action)
+	{
+		case	'2'	:	$oninfo='环境检测';	break;
+		case	'3'	:	$oninfo='配置数据库';	break;
+		case	'4'	:	$oninfo='创建数据库';	break;
+		case	'5'	:	$oninfo='创建管理员';	break;
+		case	'6'	:	$oninfo='安装结束';	break;
+		default		:	$oninfo='注册协议';	break;
+	}
+?>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>SimHR V4.5 Install Wizard - Powered by SimPHP</title>
+<style type="text/css">
+<!--
+body,td,th {
+	font-size: 12px;
+	color: #666666;
+}
+body {
+	background-color: #FFCC99;
+	margin-left: 0px;
+	margin-top: 5px;
+	margin-right: 0px;
+	margin-bottom: 5px;
+}
+a {
+	font-size: 12px;
+}
+a:link {
+	color: #666666;
+}
+.logo {
+	font-size: 24px;
+	font-style: normal;
+	font-weight: bolder;
+	color: #FFFFFF;
+	font-variant: normal;
+}
+.vision {
+	color: #FFFFFF;
+}
+.menu_boder {
+	border: 1px solid #CCCCCC;
+	line-height: 20px;
+	word-spacing: 5px;
+}
+.title {
+	font-size: 12px;
+	font-weight: bolder;
+	color: #FFFFFF;
+	background-color: #FFCC99;
+}
+.title_select {
+	font-size: 12px;
+	font-weight: bolder;
+	color: #FFFFFF;
+	background-color: #6699CC;
+}
+.submit {
+	font-size: 12px;
+	color: #FFFFFF;
+	background-color: #6699CC;
+	border: 1px solid #CCCCCC;
+	line-height: 20px;
+	font-weight: bold;
+}
+a:visited {
+	color: #666666;
+}
+a:hover {
+	color: #666666;
+}
+a:active {
+	color: #666666;
+}
+-->
+</style></head>
+
+<body>
+<table width="778" height="100%" border="0" align="center" cellpadding="0" cellspacing="0" class="menu_boder">
+  <tr>
+    <td align="center" valign="top" bgcolor="#FFFFFF" height="65">
+	<table width="778" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td colspan="2" align="center">
+		<table width="100%"  border="0" cellspacing="5" cellpadding="0">
+            <tr align="center" bgcolor="#FFCC99" class="vision">
+              <td height="30" class="<?=title_select('1')?>">安装协议</td>
+              <td height="30" class="<?=title_select('2')?>">环境检测</td>
+              <td height="30" class="<?=title_select('3')?>">配置数据库</td>
+              <td height="30" class="<?=title_select('4')?>">创建数据表</td>
+              <td height="30" class="<?=title_select('5')?>">创建管理员</td>
+              <td height="30" class="<?=title_select('6')?>">安装成功</td>
+              </tr>
+        </table>
+		</td>
+      </tr>
+      <tr align="left" bgcolor="#6699CC">
+        <td height="25" class="title_select">&nbsp;&nbsp;◎ 当前操作 -&gt; <?=$oninfo?></td>
+        <td align="right" class="title_select">SimHR V4.5 Install Wizard &nbsp;&nbsp;</td>
+      </tr>
+    </table>
+	</td>
+  </tr>
+  <tr>
+    <td align="center" valign="middle" bgcolor="#FFFFFF">
+	<?
+		if (empty($action) || $action=='1')
+		{?>
+		<table width="100%"  border="0" cellpadding="0" cellspacing="5">
+		  <tr>
+			<td height="30" bgcolor="#f0f0f0" class="menu_boder">&nbsp;协议内容</td>
+		  </tr>
+		  <tr>
+			<td height="30" class="menu_boder"><br>
+			  <ol>
+					<li>版权所有 <a href='http://www.php365.cn'>SimPHP</a> &copy; 2004-<?=date('Y')?> ,All rights reserved. <a href='http://www.php365.cn'>SimPHP</a>保留所有权利</li>
+					<li>在开始安装之前，请务必仔细阅读本授权协议，在确定同意并满足授权协议的全部条款后，即可继续 安装</li>
+					<li><a href='http://www.php365.cn'>SimPHP</a> 软件产品包括 SimRealEstate 房产软件，SimHR 人才软件, SimSNS 交友软件，SimMall 商城程序，SimCMS 文章管理软件，SimOA 网络办公软件等.</li>
+					<li><a href='http://www.php365.cn'>SimPHP</a> 公开提供的软件为商业软件，全部软件包括免费试用版本、正式授权版本.未经<a href='http://www.php365.cn'>SimPHP</a>授权用户,不得以任何理由用于商业用途.</li>
+					<li>商业用户必须在同一 IP 的服务器上安装 或 在同一主域名的两个主机下（如 domain1.your.com，domain2.your.com)</li>
+					<li>商业用户拥有其全部会员资料、文章及相关信息的所有权，并独立承担与文章内容的相关法律义务</li>
+					<li>禁止以任何目的通过 Internet 或其他媒介将所获授权的产品提供给第三人或公众</li>
+					<li>禁止任何形式的重新分发，更不得利用非法重新分发获利</li>
+					<li>凡已安装用户即认为已经同意以上全部条款</li>
+			  </ol>
+			</td>
+		  </tr>
+		  <form action="install.php" method="post">
+		  <tr>
+			<td height="40" align="center" bgcolor="#f0f0f0" class="menu_boder"><input name="Submit" type="submit" class="submit" value="同意协议">&nbsp;&nbsp;&nbsp;&nbsp;<input name="action" type="hidden" id="action" value="2">&nbsp;&nbsp;&nbsp;&nbsp;<input name="Submit" type="button" class="submit" value="我不同意" onclick="javascript:window.close()"></td>
+		  </tr>
+		  </form>
+		</table>
+		<? }
+		elseif ($action=='2')
+		{
+			if ($folder!='' && isset($folder))
+			{
+				@chmod($folder,0777);
+			}
+		?>
+		<table width="100%"  border="0" cellspacing="5" cellpadding="0">
+		  <tr>
+			<td height="25" bgcolor="#f0f0f0" class="menu_boder">&nbsp;文件夹检测</td>
+		  </tr>
+		  <tr>
+		    <td height="25" bgcolor="#FFFFFF" class="menu_boder"><br>
+			<ol>
+				<li>数据存储&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;<?=folder_on('../common')?></li>
+				<li>缓存存储&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;<?=folder_on('../common/cache')?></li>
+				<li>用户组&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;<?=folder_on('../common/right')?></li>
+				<li>数据备份&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;<?=folder_on('../admin/backup')?></li>
+				<li>静态文件存储&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;<?=folder_on('../htmldata')?></li>
+				<li>个人用户图片存储&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;<?=folder_on('../mem_img')?></li>
+				<li>企业标志图片存储&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;<?=folder_on('../qy_img')?></li>
+			</ol>
+			</td>
+	      </tr>
+		  <tr>
+		    <td height="25" bgcolor="#f0f0f0" class="menu_boder">&nbsp;文件检测</td>
+	      </tr>
+		  <tr>
+			<td height="25" bgcolor="#FFFFFF" class="menu_boder"><br>
+			<ol>
+				<li>数据库配置文件&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;<?=folder_on('../config.inc.php')?></li>
+				<li>系统配置文件&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;<?=folder_on('../common/system.php')?></li>
+			</ol>
+			</td>
+		  </tr>
+		  <form action="install.php" method="post">
+		  <tr>
+			<td height="40" align="center" bgcolor="#f0f0f0" class="menu_boder"><input name="Submit" type="submit" class="submit" value="继续安装">&nbsp;&nbsp;&nbsp;&nbsp;<input name="action" type="hidden" id="action" value="3">&nbsp;&nbsp;&nbsp;&nbsp;<input name="Submit" type="button" class="submit" value="返回上一步" onclick="javascript:history.go(-1)"></td>
+		  </tr>
+		  </form>
+      </table>
+		<? }
+		elseif ($action=='3')
+		{
+			require '../config.inc.php';
+			if ($submit_config)
+			{
+				$fp = fopen('../config.inc.php', 'r');
+				$configfile = fread($fp, filesize('../config.inc.php'));
+				fclose($fp);
+
+				$database 		= slashes($HTTP_POST_VARS[database],1);
+				$pconnect 		= slashes($HTTP_POST_VARS[pconnect],1);
+
+				$dbserver 		= slashes($HTTP_POST_VARS[dbserver],1);
+				$dbuser 		= slashes($HTTP_POST_VARS[dbuser],1);
+				$dbpass 		= slashes($HTTP_POST_VARS[dbpass],1);
+				$dbname 		= slashes($HTTP_POST_VARS[dbname],1);
+
+				$adminemail 	= slashes($HTTP_POST_VARS[adminemail],1);
+				$tablepre 		= slashes($HTTP_POST_VARS[tablepre],1);
+
+				$webtitle 		= slashes($HTTP_POST_VARS[webtitle],1);
+				$cookpath 		= slashes($HTTP_POST_VARS[cookpath],1);
+				$cookdomain 	= slashes($HTTP_POST_VARS[cookdomain],1);
+
+				$configfile = preg_replace("/[$]pconnect\s*\=\s*[\"'].*?[\"']/is", "\$pconnect = '$pconnect'", $configfile);
+
+				$configfile = preg_replace("/[$]dbserver\s*\=\s*[\"'].*?[\"']/is", "\$dbserver = '$dbserver'", $configfile);
+				$configfile = preg_replace("/[$]dbuser\s*\=\s*[\"'].*?[\"']/is", "\$dbuser = '$dbuser'", $configfile);
+				$configfile = preg_replace("/[$]dbpass\s*\=\s*[\"'].*?[\"']/is", "\$dbpass = '$dbpass'", $configfile);
+				$configfile = preg_replace("/[$]dbname\s*\=\s*[\"'].*?[\"']/is", "\$dbname = '$dbname'", $configfile);
+
+				$configfile = preg_replace("/[$]adminemail\s*\=\s*[\"'].*?[\"']/is", "\$adminemail = '$adminemail'", $configfile);
+				$configfile = preg_replace("/[$]tablepre\s*\=\s*[\"'].*?[\"']/is", "\$tablepre = '$tablepre'", $configfile);
+				$configfile = preg_replace("/[$]webtitle\s*\=\s*[\"'].*?[\"']/is", "\$webtitle = '$webtitle'", $configfile);
+				$configfile = preg_replace("/[$]cookpath\s*\=\s*[\"'].*?[\"']/is", "\$cookpath = '$cookpath'", $configfile);
+				$configfile = preg_replace("/[$]cookdomain\s*\=\s*[\"'].*?[\"']/is", "\$cookdomain = '$cookdomain'", $configfile);
+
+				$fp = fopen('../config.inc.php', 'w');
+		        fwrite($fp, trim($configfile));
+				$conn_info=@mysql_connect($dbserver,$dbuser,$dbpass)	?	'<font color=\'#6699cc\'>成功</font>'	:	'<font color=\'#ff0000\'>失败&nbsp;Can not connect mySQL </font>';
+				$sele_info=@mysql_select_db($dbname)	?	'<font color=\'#6699cc\'>成功</font>'	:	'<font color=\'#ff0000\'>失败&nbsp;Can not select database \''.$dbname.'\'</font>';
+				?>
+				<table width="100%"  border="0" cellspacing="5" cellpadding="0">
+				  <tr>
+					<td height="25" align="left" valign="middle" bgcolor="#F0F0F0" class="menu_boder">&nbsp;数据库链接</td>
+				  </tr>
+				  <tr>
+				    <td height="30" align="left" valign="middle" bgcolor="#FFFFFF" class="menu_boder"><br>
+					<ol>
+						<li>数据库链接&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;<?=$conn_info?></li>
+						<li>数据库选择&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;<?=$sele_info?></li>
+					</ol>
+					</td>
+			      </tr>
+				  <form action="install.php" method="post">
+				  <tr>
+				    <td height="40" align="center" valign="middle" bgcolor="#F0F0F0" class="menu_boder"><input name="Submit" type="submit" class="submit" value="继续安装">&nbsp;&nbsp;&nbsp;&nbsp;<input name="action" type="hidden" id="action" value="4">&nbsp;&nbsp;&nbsp;&nbsp;<input name="Submit" type="button" class="submit" value="返回上一步" onclick="javascript:history.go(-1)"></td>
+			      </tr>
+				  </form>
+				</table>
+				<?
+			}
+			else
+			{
+				if (!is_writable('../config.inc.php'))
+				{?>
+				<table width="100%"  border="0" cellspacing="5" cellpadding="0">
+				  <tr>
+					<td height="30" align="center" valign="middle" bgcolor="#F0F0F0" class="menu_boder"><table width="95%"  border="0" align="center" cellpadding="0" cellspacing="1">
+					  <tr>
+						<td align="center"><font color="#ff0000">数据库配置文件不可写,如果配置信息不正确,请返回上一页修改</font></td>
+					  </tr>
+					</table></td>
+				  </tr>
+				</table>
+				<? }
+				?>
+				<table width="100%"  border="0" cellspacing="5" cellpadding="0">
+				  <tr>
+					<td height="30" bgcolor="#F0F0F0" class="menu_boder">&nbsp;配置数据库</td>
+				  </tr>
+				  <form action="install.php" method="post">
+				  <tr>
+					<td bgcolor="#CCCCCC">
+					<table width="100%"  border="0" cellspacing="1" cellpadding="0">
+					  <tr bgcolor="#FFFFFF">
+						<td width="20%" height="30" align="center">数 据 库</td>
+						<td height="30">&nbsp;
+						<?=$database?></td>
+					  </tr>
+					  <tr bgcolor="#FFFFFF">
+						<td width="20%" height="30" align="center">链接方式</td>
+						<td height="30">&nbsp;
+						<select name="pconnect" class="submit">
+						  <option value="0">暂时链接</option>
+						  <option value="1">永久链接</option>
+						</select>
+						&nbsp;&nbsp;推荐暂时链接</td>
+					  </tr>
+					  <tr bgcolor="#FFFFFF">
+						<td width="20%" height="30" align="center">服务器名</td>
+						<td height="30">&nbsp;
+						<input name="dbserver" type="text" class="submit" id="dbserver" value="<?=$dbserver?>">
+						&nbsp;&nbsp;数据库服务器,默认为 localhost ,可不修改</td>
+					  </tr>
+					  <tr bgcolor="#FFFFFF">
+						<td width="20%" height="30" align="center">数据库用户名</td>
+						<td height="30">&nbsp;
+						<input name="dbuser" type="text" class="submit" id="dbuser" value="<?=$dbuser?>">
+						&nbsp;&nbsp;链接数据库所需要的用户名</td>
+					  </tr>
+					  <tr bgcolor="#FFFFFF">
+						<td width="20%" height="30" align="center">数据库密码</td>
+						<td height="30">&nbsp;
+						<input name="dbpass" type="text" class="submit" id="dbpass" value="<?=$dbpass?>">
+&nbsp;&nbsp;链接数据库所需要的密码</td>
+					  </tr>
+					  <tr bgcolor="#FFFFFF">
+						<td width="20%" height="30" align="center">数据库名称</td>
+						<td height="30">&nbsp;
+						<input name="dbname" type="text" class="submit" id="dbname" value="<?=$dbname?>">
+&nbsp;&nbsp;选择正确的数据表存储库</td>
+					  </tr>
+					  <tr bgcolor="#FFFFFF">
+						<td height="30" align="center">数据表前缀</td>
+						<td height="30">&nbsp;
+						<input name="tablepre" type="text" class="submit" id="tablepre" value="<?=$tablepre?>" size="30">
+						&nbsp;&nbsp;数据表前缀,便于和其它数据表相区分,</td>
+					  </tr>
+					  <tr bgcolor="#FFFFFF">
+						<td height="30" align="center">管理员信息</td>
+						<td height="30">&nbsp;
+						<input name="adminemail" type="text" class="submit" id="adminemail" value="<?=$adminemail?>" size="40">
+						&nbsp;&nbsp;</td>
+					  </tr>
+					  <tr bgcolor="#FFFFFF">
+						<td height="30" align="center">网站名称</td>
+						<td height="30">&nbsp;
+						<input name="webtitle" type="text" class="submit" id="webtitle" value="<?=$webtitle?>" size="50"></td>
+					  </tr>
+					  <tr bgcolor="#FFFFFF">
+						<td height="30" align="center">Cookie 作用域</td>
+						<td height="30">&nbsp;
+						<input name="cookdomain" type="text" class="submit" id="cookdomain" value="<?=$cookdomain?>">
+						&nbsp;&nbsp; 建议保持空值 若登陆不成功,可修改此项 </td>
+					  </tr>
+					  <tr bgcolor="#FFFFFF">
+						<td height="30" align="center">Cookie 作用路径 </td>
+						<td height="30">&nbsp;
+						  <input name="cookpath" type="text" class="submit" id="cookpath" value="<?=$cookpath?>">
+&nbsp;&nbsp; 建议保持空值 若登陆不成功,可修改此项</td>
+					  </tr>
+					</table>
+					</td>
+				  </tr>
+				  <tr>
+					<td height="40" align="center" bgcolor="#F0F0F0" class="menu_boder"><input name="submit_config" type="submit" class="submit" id="submit_config" value="继续安装">&nbsp;&nbsp;&nbsp;&nbsp;<input name="action" type="hidden" id="action" value="3">&nbsp;&nbsp;&nbsp;&nbsp;<input name="Submit" type="button" class="submit" value="返回上一步" onclick="javascript:history.go(-1)"></td>
+				  </tr>
+				  </form>
+			  </table>
+			<?
+			}
+		}
+		elseif ($action=='4')
+		{
+			$sql_file="jspace.sql";
+			if (!file_exists($sql_file))	{exit('数据表文件丢失');}
+
+			$fp=fopen($sql_file,'r');
+			$sql=fread($fp,filesize($sql_file));
+			fclose($fp);
+			require '../config.inc.php';
+			require '../common/mysql_class.php';
+			$db = new wanedb;
+			$db->connect();
+			?>
+			<table width="100%"  border="0" cellspacing="5" cellpadding="0">
+			  <tr>
+				<td height="25" bgcolor="#F0F0F0" class="menu_boder">&nbsp;数据库链接</td>
+			  </tr>
+			  <tr>
+				<td height="25" class="menu_boder"><br>
+                  <ol>
+                    <li>数据库链接&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;
+                        <font color="#6699cc">成功</font>
+                    </li>
+                    <li>数据库选择&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;
+                        <font color="#6699cc">成功</font>
+                    </li>
+                </ol></td>
+			  </tr>
+			  <tr>
+				<td height="25" bgcolor="#F0F0F0" class="menu_boder">&nbsp;建立数据表</td>
+			  </tr>
+			  <tr>
+				<td height="25" class="menu_boder"><br>
+				<ol>
+					<?=install_database($sql)?>
+				</ol>
+				</td>
+			  </tr>
+			  <form action="install.php" method="post">
+			  <tr>
+				<td height="40" align="center" bgcolor="#f0f0f0" class="menu_boder"><input name="submit_config" type="submit" class="submit" id="submit_config" value="继续安装">&nbsp;&nbsp;&nbsp;&nbsp;<input name="action" type="hidden" id="action" value="5">&nbsp;&nbsp;&nbsp;&nbsp;<input name="Submit" type="button" class="submit" value="返回上一步" onclick="javascript:history.go(-1)"></td>
+			  </tr>
+			  </form>
+			</table>
+			<?
+		}
+		elseif($action=='5')
+		{?>
+			<table width="100%"  border="0" cellspacing="5" cellpadding="0">
+			  <tr>
+				<td height="25" bgcolor="#F0F0F0" class="menu_boder">&nbsp;创建管理员</td>
+			  </tr>
+			  <form action="install.php" method="post">
+			  <tr>
+				<td height="25" bgcolor="#cccccc"><table width="100%"  border="0" cellspacing="1" cellpadding="0">
+                  <tr bgcolor="#FFFFFF">
+                    <td width="35%" height="25" align="center">用户名</td>
+                    <td height="25">&nbsp;
+                    <input name="username" type="text" class="submit" id="username" value="username"></td>
+                  </tr>
+                  <tr bgcolor="#FFFFFF">
+                    <td width="35%" height="25" align="center">登陆密码</td>
+                    <td height="25">&nbsp;
+                    <input name="password" type="text" class="submit" id="password" value="password"></td>
+                  </tr>
+                  <tr bgcolor="#FFFFFF">
+                    <td width="35%" height="25" align="center">管理员邮箱</td>
+                    <td height="25">&nbsp;
+                    <input name="email" type="text" class="submit" id="email" value="webmaster@domain.com" size="30"></td>
+                  </tr>
+                  <tr bgcolor="#FFFFFF">
+                    <td width="35%" height="25" align="center">密码提示问题</td>
+                    <td height="25">&nbsp;
+                    <input name="question" type="text" class="submit" id="question" value="Enter you question" size="50"></td>
+                  </tr>
+                  <tr bgcolor="#FFFFFF">
+                    <td width="35%" height="25" align="center">问题回答</td>
+                    <td height="25">&nbsp;
+                    <input name="answer" type="text" class="submit" id="answer" value="Enter you answer" size="40"></td>
+                  </tr>
+                </table></td>
+			  </tr>
+			  <tr>
+				<td height="40" align="center" bgcolor="#f0f0f0" class="menu_boder"><input name="submit_config" type="submit" class="submit" id="submit_config" value="继续安装">&nbsp;&nbsp;&nbsp;&nbsp;<input name="action" type="hidden" id="action" value="6">&nbsp;&nbsp;&nbsp;&nbsp;<input name="Submit" type="button" class="submit" value="返回上一步" onclick="javascript:history.go(-1)"></td>
+			  </tr>
+			  </form>
+			</table>
+		<? }
+		elseif ($action=='6')
+		{
+			if (empty($username) || empty($password) || empty($email))
+			{
+				exit('资料不完整<br><br><a href=\'javascript:history.go(-1)\'>返回重建</a>');
+			}
+			require '../config.inc.php';
+			require '../common/mysql_class.php';
+			$db = new wanedb;
+			$db->connect();
+			if (!$db->num($db->query("select username from {$tablepre}member where username='$username'")))
+			{
+				$db->query("INSERT INTO {$tablepre}member (username,password,email,kind,vip,info_sign,question,answer,regtime) values ('$username','".md5($password)."','$email','-1','1','1','$question','$answer','".time()."')");
+			}
+			else
+			{
+				exit('此管理员已存在<br><br><a href=\'javascript:history.go(-1)\'>返回重建</a>');
+			}
+			require '../common/system.php';
+			update_cache('cache_all','1');
+		?>
+		<table width="100%"  border="0" cellspacing="5" cellpadding="0">
+		  <tr>
+			<td height="25" bgcolor="#F0F0F0" class="menu_boder">&nbsp;安装成功</td>
+		  </tr>
+		  <tr>
+			<td height="60" align="center" class="menu_boder">恭喜您,您已成功安装了 SimHR V4.5 ;<a href='http://www.php365.cn'>SimPHP</a>感谢您选择本产品 .<BR>
+		    若在使用中出现任何疑问,请登陆 <a href="http://www.php365.cn" target="_blank">http://www.php365.cn</a> 获取相关信息和升级信息 </td>
+		  </tr>
+		  <tr>
+			<td height="80" align="center" class="menu_boder">您的管理员信息如下<BR>
+			  用户名:&nbsp;<?=$username?>&nbsp;&nbsp;&nbsp;登陆密码:&nbsp;<?=$password?></td>
+		  </tr>
+		  <tr>
+			<td height="25" align="center" class="menu_boder"><font color="#FF0000"><a href='http://www.php365.cn'>SimPHP</a>提醒您 , 立即删除 install.php </font></td>
+		  </tr>
+		  <tr>
+			<td height="25" align="center" bgcolor="#F0F0F0" class="menu_boder"><a href="../admin/index.php">进入后台管理</a></td>
+		  </tr>
+	  </table>
+		<? }
+	?>
+	</td>
+  </tr>
+  <tr>
+    <td height="60" align="right" valign="middle" bgcolor="#FFFFFF" class="title_select">Powered by SimPHP &copy; 2004-2008 <a href='http://www.php365.cn'><font  color="#FFFFFF">SimPHP</font></a>&nbsp;&nbsp;<br>Website : <a href='http://www.php365.cn'><font  color="#FFFFFF">http://www.php365.cn</font></a>&nbsp;&nbsp; </td>
+  </tr>
+</table>
+</body>
+</html>

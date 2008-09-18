@@ -1,0 +1,67 @@
+<table width="100%"  border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="188" align="center">{COMCP}	</td>
+    <td align="center"><table width="581" height="36"  border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td width="581" height="36" background="{IMGDIR}control/favourite.gif"></td>
+      </tr>
+    </table>
+      <table width="581" height="36"  border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td width="581" align="center" valign="middle" background="{IMGDIR}control/center_bg.gif">
+		  <table width="550" border="0" align="center" cellpadding="0" cellspacing="0" class="td_four">
+            <form action="company.php?action=hunterfavourite" method="post">
+			<tr>
+              <td height="30">&nbsp;&nbsp;&nbsp;&nbsp;行业</td>
+              <td align="center">目前职位</td>
+              <td align="center">真实姓名</td>
+              <td align="center">收藏时间</td>
+              <td align="center">操作
+                <input name="chkall" type="checkbox" class="main_button" onclick="checkall(this.form)" value="del"></td>
+            </tr>
+            <tr align="center">
+              <td height="1" colspan="5">
+			  <table width="95%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+              <td height="1" background="{IMGDIR}row.gif"></td>
+              </tr>
+              </table>
+			  </td>
+            </tr>
+			<!-- BEGIN list -->
+            <tr align="center">
+              <td height="30" align="left">&nbsp;&nbsp;&nbsp;&nbsp;<a href="{HLINK}" target="_blank">{INDUSTRY}</a></td>
+              <td height="30" align="center">{POSITION}</td>
+              <td height="30">{TRUENAME}</td>
+              <td height="30">{ADDTIME}</td>
+              <td height="30"><input name="delete[]" type="checkbox" id="delete[]" value="{FAVID}"></td>
+              </tr>
+            <tr align="center">
+              <td height="1" colspan="5">
+			  <table width="95%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+              <td height="1" background="{IMGDIR}row.gif"></td>
+              </tr>
+              </table>
+			  </td>
+            </tr>
+			<!-- END list -->
+            <tr align="center">
+              <td height="30" colspan="4">{PAGELIST}</td>
+              <td height="30"><input name="delpage" type="hidden" id="delpage" value="{CURPAGE}">
+              <input name="delete_hfav" type="submit" class="input" id="delete_hfav" value="删除"></td>
+              </tr>
+            <tr>
+              <td height="10" colspan="5"></td>
+            </tr></form>
+          </table>
+		  </td>
+        </tr>
+      </table>
+      <table width="581" height="15"  border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td width="581" height="15" background="{IMGDIR}control/center_down.gif"></td>
+        </tr>
+      </table></td>
+  </tr>
+</table>

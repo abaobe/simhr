@@ -1,0 +1,207 @@
+<link href="../../css/style.css" rel="stylesheet" type="text/css">
+<table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td><table><tr><td height="5"></td></tr></table>
+		<table width="776" border="0" align="center" cellpadding="0" cellspacing="0">
+        <tr>
+          <td><img src="{IMGDIR}global/top.gif" width="776" height="4"></td>
+        </tr>
+        <tr>
+          <td height="25" valign="bottom" background="{IMGDIR}global/mainbg.gif">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;◎&nbsp;&nbsp;&nbsp;&nbsp;(第二步 : 填写个人简历 基本资料)</td>
+        </tr>
+        <tr>
+          <td align="center" background="{IMGDIR}global/mainbg.gif"><hr width="94%" size="1" color="#CCCCCC"></td>
+        </tr>
+		<tr>
+		  <td align="center" valign="top" background="{IMGDIR}global/mainbg.gif">
+		  <table width="95%"  border="0" align="center" cellpadding="0" cellspacing="0">
+		  <form action="register.php" method="post">
+            <tr>
+              <td width="25%" height="30">&nbsp;&nbsp;用 户 名</td>
+              <td width="75%" height="25">{JSPACE_USER}</td>
+            </tr>
+            <tr>
+              <td height="1" colspan="2">
+			  <table width="98%"  border="0" align="center" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td height="2" background="{IMGDIR}row.gif"></td>
+                </tr>
+              </table></td>
+            </tr>
+			<tr>
+              <td width="25%" height="30">&nbsp;&nbsp;真实姓名</td>
+              <td width="75%" height="25"><input name="truename" type="text" class="input" id="truename" size="50" maxlength="50"></td>
+            </tr>
+            <tr>
+              <td height="1" colspan="2">
+			  <table width="98%"  border="0" align="center" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td height="2" background="{IMGDIR}row.gif"></td>
+                </tr>
+              </table></td>
+            </tr>
+            <tr>
+              <td height="30">&nbsp;&nbsp;性&nbsp;&nbsp;别</td>
+              <td height="25"><input name="sex" type="radio" value="{SEX_MALE}" checked>
+                男&nbsp;&nbsp;&nbsp;&nbsp;
+                <input name="sex" type="radio" value="{SEX_FEMALE}">
+                女</td>
+            </tr>
+            <tr>
+              <td height="1" colspan="2">
+			  <table width="98%"  border="0" align="center" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td height="2" background="{IMGDIR}row.gif"></td>
+                </tr>
+              </table></td>
+            </tr>
+            <tr>
+              <td height="30">&nbsp;&nbsp;民&nbsp;&nbsp;族</td>
+              <td height="25"><select name="mingzu" id="mingzu">{MINZUS}</select></td>
+            </tr>
+            <tr>
+              <td height="1" colspan="2">
+			  <table width="98%"  border="0" align="center" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td height="2" background="{IMGDIR}row.gif"></td>
+                </tr>
+              </table></td>
+              </tr><tr>
+              <td height="30">&nbsp;&nbsp;出生年月</td>
+              <td height="25"><select name="year" id="year">{SELECT_YEARS}
+              </select>
+              年
+                <select name="month" id="month">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                  <option value="11">11</option>
+                  <option value="12">12</option>
+                </select>
+                月
+                <select name="day" id="day">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                  <option value="11">11</option>
+                  <option value="12">12</option>
+                  <option value="13">13</option>
+                  <option value="14">14</option>
+                  <option value="15">15</option>
+                  <option value="16">16</option>
+                  <option value="17">17</option>
+                  <option value="18">18</option>
+                  <option value="19">19</option>
+                  <option value="20">20</option>
+                  <option value="21">21</option>
+                  <option value="22">22</option>
+                  <option value="23">23</option>
+                  <option value="24">24</option>
+                  <option value="25">25</option>
+                  <option value="26">26</option>
+                  <option value="27">27</option>
+                  <option value="28">28</option>
+                  <option value="29">29</option>
+                  <option value="30">30</option>
+                  <option value="31">31</option>
+                </select>
+                日</td>
+            </tr>
+            <tr>
+              <td height="1" colspan="2">
+			  <table width="98%"  border="0" align="center" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td height="2" background="{IMGDIR}row.gif"></td>
+                </tr>
+              </table></td>
+            </tr>
+            <tr>
+              <td height="30">&nbsp;&nbsp;户口所在地</td>
+              <td height="25"><select name="hukou" id="hukou">{PROVINCES}</select></td>
+            </tr>
+            <tr>
+              <td height="1" colspan="2">
+			  <table width="98%"  border="0" align="center" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td height="2" background="{IMGDIR}row.gif"></td>
+                </tr>
+              </table></td>
+            </tr>
+            <tr>
+              <td height="30">&nbsp;&nbsp;现居住地</td>
+              <td height="25"><select name="juzhu_1" id="juzhu_1">{PROVINCES}</select>
+                <input name="juzhu_2" type="text" class="input" id="juzhu_2" size="50"></td>
+            </tr>
+            <tr>
+              <td height="1" colspan="2">
+			  <table width="98%"  border="0" align="center" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td height="2" background="{IMGDIR}row.gif"></td>
+                </tr>
+              </table></td>
+            </tr>
+            <tr>
+              <td height="30">&nbsp;&nbsp;身 份 证</td>
+              <td height="25"><input name="shengfengzhen" type="text" class="input" id="shengfengzhen" size="30"></td>
+            </tr>
+            <tr>
+              <td height="1" colspan="2">
+			  <table width="98%"  border="0" align="center" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td height="2" background="{IMGDIR}row.gif"></td>
+                </tr>
+              </table></td>
+            </tr>
+            <tr>
+              <td height="30">&nbsp;&nbsp;婚姻状况</td>
+              <td height="25"><select name="marry" id="marry">{MARRYS}</select></td>
+            </tr>
+            <tr>
+              <td height="1" colspan="2">
+			  <table width="98%"  border="0" align="center" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td height="2" background="{IMGDIR}row.gif"></td>
+                </tr>
+              </table></td>
+            </tr>
+            <tr>
+              <td height="30">&nbsp;&nbsp;政治面貌</td>
+              <td height="25"><select name="social" id="social">{SOCIALS}</select></td>
+            </tr>
+            <tr>
+              <td height="1" colspan="2">
+			  <table width="98%"  border="0" align="center" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td height="2" background="{IMGDIR}row.gif"></td>
+                </tr>
+              </table></td>
+            </tr>
+            <tr align="center">
+              <td height="30" colspan="2"><input name="submit_per_basic" type="submit" class="input" id="submit_per_basic" value=" 提  交 ">
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <input name="Submit" type="reset" class="input" value=" 重  设 "></td>
+              </tr>
+          </form>
+		  </table></td>
+	    </tr>
+        <tr>
+          <td><img src="{IMGDIR}global/down.gif" width="776" height="4"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>

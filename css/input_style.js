@@ -1,9 +1,9 @@
 
-var link_help = "²åÈë³¬¼¶Á´½Ó\n\n²åÈëÒ»¸ö³¬¼¶Á¬½Ó¡£\nÀıÈç£º\n[url]http://www.mydomain.com[/url]\n[url=http://www.mydomain.com]ÎÒµÄÍøÕ¾[/url]";
-var link_normal = "ÇëÊäÈëÁ´½ÓÏÔÊ¾µÄÎÄ×Ö£¬Èç¹ûÁô¿ÕÔòÖ±½ÓÏÔÊ¾Á´½Ó¡£";
-var link_normal_input = "ÇëÊäÈë URL¡£";
-var image_help = "²åÈëÍ¼Ïñ\n\nÔÚÎÄ±¾ÖĞ²åÈëÒ»·ùÍ¼Ïñ¡£\nÀıÈç£º[img]http://www.domain.com/images/logo.gif[/img]";
-var image_normal = "ÇëÊäÈëÍ¼ÏñµÄ URL¡£";
+var link_help = "æ’å…¥è¶…çº§é“¾æ¥\n\næ’å…¥ä¸€ä¸ªè¶…çº§è¿æ¥ã€‚\nä¾‹å¦‚ï¼š\n[url]http://www.mydomain.com[/url]\n[url=http://www.mydomain.com]æˆ‘çš„ç½‘ç«™[/url]";
+var link_normal = "è¯·è¾“å…¥é“¾æ¥æ˜¾ç¤ºçš„æ–‡å­—ï¼Œå¦‚æœç•™ç©ºåˆ™ç›´æ¥æ˜¾ç¤ºé“¾æ¥ã€‚";
+var link_normal_input = "è¯·è¾“å…¥ URLã€‚";
+var image_help = "æ’å…¥å›¾åƒ\n\nåœ¨æ–‡æœ¬ä¸­æ’å…¥ä¸€å¹…å›¾åƒã€‚\nä¾‹å¦‚ï¼š[img]http://www.domain.com/images/logo.gif[/img]";
+var image_normal = "è¯·è¾“å…¥å›¾åƒçš„ URLã€‚";
 function AddText(NewCode) 
 {
 	if(document.all)

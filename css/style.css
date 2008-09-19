@@ -1,10 +1,10 @@
-a {text-decoration: none;} 
-a:link {color: #333333;} /* Î´·ÃÎÊµÄÁ´½Ó */
-a:visited {color: #333333;} /* ÒÑ·ÃÎÊµÄÁ´½Ó */
-a:hover {color: #999999;} /* Êó±êÔÚÁ´½ÓÉÏ */ 
-a:active {color: #999999;} /* µã»÷¼¤»îÁ´½Ó */
+a {text-decoration: none;}
+a:link {color: #333333;} /* æœªè®¿é—®çš„é“¾æŽ¥ */
+a:visited {color: #333333;} /* å·²è®¿é—®çš„é“¾æŽ¥ */
+a:hover {color: #999999;} /* é¼ æ ‡åœ¨é“¾æŽ¥ä¸Š */
+a:active {color: #999999;} /* ç‚¹å‡»æ¿€æ´»é“¾æŽ¥ */
 
-body 
+body
 {
 	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
 	font-size: 12px;
@@ -18,7 +18,7 @@ body
 	SCROLLBAR-FACE-COLOR: #ffffff;
 	SCROLLBAR-SHADOW-COLOR: #ffffff;
 	SCROLLBAR-DARK-SHADOW-COLOR: #ffffff;
-	SCROLLBAR-TRACK-COLOR: #ffffff;	
+	SCROLLBAR-TRACK-COLOR: #ffffff;
 }
 TH {FONT-SIZE: 12px}
 TD {
@@ -29,7 +29,7 @@ SELECT {FONT-SIZE: 12px}
 textarea{FONT-SIZE: 12px;border: 1px double #B4B4B4;}
 A {	COLOR: #333333; TEXT-DECORATION: none; TEXT-TRANSFORM: none}
 A:hover {COLOR: #ff6600; TEXT-DECORATION: underline}
-.input 
+.input
 {
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 10px;
@@ -37,7 +37,7 @@ A:hover {COLOR: #ff6600; TEXT-DECORATION: underline}
 	border: 1px solid #C7C7C7;
 	background-color: #FFFFFF;
 }
-.pagestyle 
+.pagestyle
 {
 	background-color: #FFFFFF;
 	border: 1px solid #cccccc;
@@ -55,7 +55,7 @@ A:hover {COLOR: #ff6600; TEXT-DECORATION: underline}
 	font-variant: normal;
 	color: #336699;
 }
-.td_lr 
+.td_lr
 {
 	border-right-width: 1px;
 	border-left-width: 1px;
@@ -64,19 +64,19 @@ A:hover {COLOR: #ff6600; TEXT-DECORATION: underline}
 	border-right-color: #CBCBCB;
 	border-left-color: #CBCBCB;
 }
-.td_down 
+.td_down
 {
 	border-bottom-width: 1px;
 	border-bottom-style: solid;
 	border-bottom-color: #CBCBCB;
 }
-.td_right 
+.td_right
 {
 	border-right-width: 1px;
 	border-right-style: solid;
 	border-right-color: #CBCBCB;
 }
-.td_topdown 
+.td_topdown
 {
 	border-top-width: 1px;
 	border-bottom-width: 1px;

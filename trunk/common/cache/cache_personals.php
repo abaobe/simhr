@@ -5,7 +5,7 @@
 	+	Powered by SimPHP
 	+	website	:	http://www.php365.cn
 	+	filename	:	cache_personals.php
-	+	last modify	:	2008-9-18 16:04:36
+	+	last modify	:	2008-9-19 11:22:04
 	+------------------------------------
 	*/
 	$cache_personals=array(
@@ -23,6 +23,14 @@
 			'id'	=>	'2',
 			'username'	=>	'ke.he',
 			'truename'	=>	'何珂',
+			'sex'	=>	'男',
+		),
+
+		'3'	=>	array(
+
+			'id'	=>	'3',
+			'username'	=>	'bo.yi',
+			'truename'	=>	'易波',
 			'sex'	=>	'男',
 		),
 

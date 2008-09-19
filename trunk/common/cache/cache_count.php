@@ -5,14 +5,14 @@
 	+	Powered by SimPHP
 	+	website	:	http://www.php365.cn
 	+	filename	:	cache_count.php
-	+	last modify	:	2008-9-18 16:04:12
+	+	last modify	:	2008-9-19 11:21:55
 	+------------------------------------
 	*/
 	$cache_count=array(
 
-		'members'	=>	'3',
+		'members'	=>	'4',
 		'member_com'	=>	'0',
-		'member_per'	=>	'3',
+		'member_per'	=>	'4',
 		'jobs'	=>	'0',
 		'finds'	=>	'0',
 
